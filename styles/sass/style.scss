@@ -1,5 +1,6 @@
-@import '_header.scss';
+@import '_setup.scss';
+@import '_vars.scss';
+@import '_mixins.scss';
 
-h1 {
-  color: red;
-}
+@import '_styling.scss';
+@import '_index.scss';

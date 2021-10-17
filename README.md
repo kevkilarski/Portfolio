@@ -1,5 +1,5 @@
-#Personal Website Portfolio
+# Personal Website Portfolio
 
-##Created by Kevin Kilarski
+Created by Kevin Kilarski
 
 Link to Live Site: kevwritescode.com
