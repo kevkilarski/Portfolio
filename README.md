@@ -1,5 +1,7 @@
-# Personal Website Portfolio
+# Portfolio
+
+This repo contains the layout for my personal portfolio website.
 
 Created by Kevin Kilarski
 
-Link to Live Site: kevwritescode.com
+Live Site: https://www.kevwritescode.com

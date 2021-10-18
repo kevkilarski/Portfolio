@@ -1,0 +1,91 @@
+/* ======================
+HEADER
+=========================*/
+
+header {
+  height: 100vh;
+  background: $primaryBlue;
+  color: $primaryWhite;
+}
+
+.headerNavWrapper {
+  background: $primaryBlue;
+  position: sticky;
+  top: 0;
+  // box-shadow: 0 1rem 1rem rgba(39, 65, 105, 0.8);
+}
+
+.headerNavGroup {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.headerNav p {
+  @include fontSize(22);
+}
+
+.headerNavIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 12%;
+}
+
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.headerTitle button {
+  padding: 0.6rem 1.8rem;
+  margin-top: 2rem;
+}
+
+
+/* ======================
+MAIN
+=========================*/
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background: $primaryWhite;
+}
+
+.aboutMe .wrapper {
+  height: 100%;
+}
+
+.aboutMeTitle {
+  text-align: center;
+}
+
+.aboutMeContent {
+  display: flex;
+  padding: $paddingStandard;
+}
+
+.aboutMeContentText p:first-child {
+  @include fontSize(30);
+  padding-bottom: 0.5rem;
+}
+
+// Add in special underline, add picture, add radius to picture

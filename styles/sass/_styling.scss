@@ -1,0 +1,133 @@
+/* ======================
+TYPOGRAPHY
+=========================*/
+
+html {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 125%;
+  color: black;
+  @include letterSpacing(0.8);
+}
+
+h1 {
+  @include fontSize(100);
+  @include lineHeight(120);
+  font-weight: 300;
+}
+
+h2 {
+  @include fontSize(45);
+}
+
+p {
+  @include lineHeight(32);
+}
+
+// @include lineHeight(29);
+// @include letterSpacing(1);
+
+// h1, button {
+//   font-family: 'Chelsea Market', cursive;
+//   font-weight: 600;
+//   font-size: 5rem;
+// }
+
+// button, .resultsTitle {
+//   font-family: 'Raleway', sans-serif;
+// }
+
+// h2, label {
+//   font-size: 1.6rem;
+// }
+
+// button {
+//   font-size: 1rem;
+// }
+
+// .status {
+//   font-size: 2.2rem;
+// }
+
+// .resultsTitle {
+//   font-size: 1.3rem;
+// }
+
+// .resultsReport {
+//   font-size: 1rem;
+// }
+
+// .cleanDetails {
+//   font-size: 1.5rem;
+// }
+
+// .itemCount {
+//   font-size: 1.1rem;
+// }
+
+
+
+
+
+/* ======================
+GENERAL
+=========================*/
+
+.wrapper {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+h1, h2, p, a, ul, button, label {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  color: black;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+i {
+  @include fontSize(30);
+  color: $primaryWhite;
+}
+
+.block {
+  display: block;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.sectionStamp {
+  display: inline-block;
+  padding: 0.3rem 1.2rem;
+  background: $secondaryBlue;
+}
+
+// .background {
+//   background: url('https://images.unsplash.com/photo-1527515234283-d93c5f8486a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80') center;
+//   background-size: cover;
+//   background-color: rgba(12, 46, 61, 0.5);
+//   background-blend-mode: multiply;
+// }
