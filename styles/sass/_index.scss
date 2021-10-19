@@ -43,6 +43,14 @@ header .wrapper {
   height: 90%;
 }
 
+header button {
+  margin-top: 2rem;
+}
+
+header i {
+  padding: 1rem 0;
+}
+
 .headerTitle {
   display: flex;
   flex-direction: column;
@@ -53,39 +61,170 @@ header .wrapper {
   margin-top: -2rem;
 }
 
-.headerTitle button {
-  padding: 0.6rem 1.8rem;
-  margin-top: 2rem;
-}
 
 
 /* ======================
-MAIN
+ABOUT ME
 =========================*/
 
 .aboutMe {
   display: flex;
   flex-direction: column;
-  height: 80vh;
   background: $primaryWhite;
-}
-
-.aboutMe .wrapper {
-  height: 100%;
-}
-
-.aboutMeTitle {
-  text-align: center;
 }
 
 .aboutMeContent {
   display: flex;
+  align-items: center;
+}
+
+.aboutMeContentImage {
+  width: 100%;
+}
+
+.aboutMeContentImage img {
+  border-radius: 10rem;
+  border: 0.25rem solid $primaryBlue;
+}
+
+.aboutMeContentText {
+  margin-left: 2.5rem;
+}
+
+.aboutMeName {
+  position: relative;
+  @include fontSize(30);
+  padding-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.aboutMeName::before {
+  content: '';
+  position: absolute;
+  top: 0.8rem;
+  left: 5rem;
+  right: 0rem;
+  height: 1rem;
+  border-bottom: 3px solid $secondaryBlue;
+}
+
+
+/* ======================
+PROJECTS
+=========================*/
+
+.projects {
+  background: $primaryGrey;
+}
+
+.projectsGroups {
+  display: flex;
+  align-items: center;
+}
+
+.projectsIcons p {
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.projectsButtons button {
+  background: $primaryBlue;
+  padding: 0.4rem 0.9rem;
+  color: $primaryWhite;
+  margin-top: 1rem;
+}
+
+.projectsImages {
+  display: flex;
+  align-items: center;
+  flex: 1 1 70rem;
+}
+
+.projectsGroupsImgRight .projectsImages {
+  margin-left: 3rem;
+}
+
+.projectsGroupsImgLeft {
+  margin: 5rem 0;
+}
+
+.projectsGroupsImgLeft .projectsImages {
+  margin-right: 3rem;
+  flex: 1 1 20rem;
+}
+
+
+/* ======================
+CONTACT
+=========================*/
+
+.contact {
+  background: $primaryBlue;
+  color: $primaryWhite;
+}
+
+.contact .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactGroups {
+  flex: 0 1 45%;
+}
+
+.contactText p {
   padding: $paddingStandard;
 }
 
-.aboutMeContentText p:first-child {
-  @include fontSize(30);
-  padding-bottom: 0.5rem;
+.contactLinksGroups {
+  display: flex;
+  padding: 0.8rem 0;
 }
 
-// Add in special underline, add picture, add radius to picture
+.contactLinksGroups a {
+  color: $primaryWhite;
+}
+
+.contactLinksGroups i {
+  flex: 0 1 2.5rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.contactFormGroups {
+  padding: 0.2rem 0;
+  margin: 0.5rem 0 1rem 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: $primaryBlue;
+  color: $primaryWhite;
+}
+
+.contactMessage {
+  height: 8rem;
+}
+
+.contactButton {
+  width: 8rem;
+}
+
+
+/* ======================
+FOOTER
+=========================*/
+
+footer {
+  background: $primaryGrey;
+}
+
+footer p {
+  text-align: center;
+}
