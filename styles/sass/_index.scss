@@ -4,8 +4,14 @@ HEADER
 
 header {
   height: calc(100vh - 2.8rem);
-  background: $primaryBlue;
+  // background-image: url("./hero.jpeg") center;
+  // background-image: url("../assets/hero2.jpg");
+  // background-size: cover;
+  // background: $primaryBlue;
+  background-image: linear-gradient($primaryBlue, $secondaryBlue);
   color: $primaryWhite;
+  // background-color: rgba(39, 65, 105, 0.6);
+  // background-blend-mode: multiply;
 }
 
 .headerNavIcons {
@@ -40,7 +46,13 @@ header i {
   margin-top: -2rem;
 }
 
-
+.headerTitleButtons a {
+  margin-top: 1.8rem;
+  padding: 0.6rem 1.8rem;
+  background: $primaryWhite;
+  color: black;
+  font-weight: 400;
+}
 
 
 
@@ -49,6 +61,7 @@ NAVIGATION BAR
 =========================*/
 
 .headerNavWrapper {
+  // background-image: url("../assets/headshot.jpg");
   height: 2.8rem;
   z-index: 10;
   background: $primaryBlue;
@@ -70,6 +83,11 @@ NAVIGATION BAR
 
 .headerNavGroup p {
   @include fontSize(22);
+}
+
+.headerTitleButtons {
+  display: flex;
+  gap: 2rem;
 }
 
 /* ======================
@@ -96,7 +114,7 @@ ABOUT ME
 
 .aboutMeContentImage img {
   border-radius: 10rem;
-  border: 0.25rem solid $primaryBlue;
+  border: 0.25rem solid $tertiaryBlue;
 }
 
 .aboutMeContentText {
@@ -208,7 +226,7 @@ PROJECTS
 }
 
 .projectsButtons button {
-  background: $primaryBlue;
+  background: $tertiaryBlue;
   padding: 0.4rem 0.9rem;
   color: $primaryWhite;
   margin-top: 1rem;
@@ -251,7 +269,9 @@ CONTACT
 =========================*/
 
 .contact {
-  background: $primaryBlue;
+  // background: $primaryBlue;
+  background-image: linear-gradient($secondaryBlue, $primaryBlue);
+
   color: $primaryWhite;
 }
 
@@ -282,8 +302,9 @@ CONTACT
   gap: 0.8rem;
 }
 
-.contactLinksGroups {
+.contactLinksGroups a {
   display: flex;
+  align-items: center;
 }
 
 .contactLinksGroup {
@@ -313,13 +334,12 @@ label {
   border-top: none;
   border-left: none;
   border-right: none;
-  background: $primaryBlue;
+  background: transparent;
   color: $primaryWhite;
 }
 
 .contactMessage {
   height: 6rem;
-
 }
 
 .contactButton {

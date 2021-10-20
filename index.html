@@ -16,9 +16,15 @@
     <nav class="headerNavGroup">
       <p><strong>Kevin Kilarski</strong> Web Developer</p>
       <div class="headerNavIcons">
-        <i class="fas fa-envelope"><span class="sr-only">Send me an email</span></i>
-        <i class="fab fa-github"><span class="sr-only">Visit my Github</span></i>
-        <i class="fab fa-linkedin"><span class="sr-only">Visit my LinkedIn</span></i>
+        <a href="mailto:kskilarski@gmail.com">
+          <i class="fas fa-envelope"><span class="sr-only">Send me an email</span></i>
+        </a>
+        <a href="https://www.github.com/kevkilarski">
+          <i class="fab fa-github"><span class="sr-only">Visit my Github</span></i>
+        </a>
+        <a href="http://www.linkedin.com/in/kevin-kilarski-386b74167">
+          <i class="fab fa-linkedin"><span class="sr-only">Visit my LinkedIn</span></i>
+        </a>
       </div>
     </nav>
   </div>
@@ -31,7 +37,10 @@
     <div class="wrapper">
       <div class="headerTitle">
         <h1><strong>Kevin Kilarski</strong> <span class="block">Web Developer</span></h1>
-        <button>About Me</button>
+        <div class="headerTitleButtons">
+          <a href="#aboutMe">About Me</a>
+          <a href="#projects">Portfolio</a>
+        </div>
       </div>
       
       <i class="fas fa-arrow-down"><span class="sr-only">View the about me section</span></i>
@@ -44,7 +53,7 @@
 
 
   <main>
-    <section class="aboutMe">
+    <section class="aboutMe" id="aboutMe">
       <div class="wrapper">
 
         <div class="sectionTitle aboutMeTitle">
@@ -140,7 +149,7 @@
 
 
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="wrapper">
 
         <div class="sectionTitle projectsTitle">
@@ -226,17 +235,26 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eos, quos voluptatem modi qui doloribus fugit ratione velit accusamus amet excepturi illum adipisci quis nam reprehenderit soluta commodi. Nobis, fuga.</p>
 
           <ul class="contactLinks">
+
             <li class="contactLinksGroups">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:kskilarski@gmail.com">kskilarski@gmail.com</a>
+              <a href="mailto:kskilarski@gmail.com">
+                <i class="fas fa-envelope"><span class="sr-only">Send me an email</span></i>
+                <p>kskilarski@gmail.com</p>
+              </a>
             </li>
+
             <li class="contactLinksGroups">
-              <i class="fab fa-github"></i>
-              <a href="https://www.github.com/kevkilarski">github.com/kevkilarski</a>
+              <a href="https://www.github.com/kevkilarski">
+                <i class="fab fa-github"><span class="sr-only">Visit my Github</span></i>
+                <p>github.com/kevkilarski</p>
+              </a>
             </li>
+
             <li class="contactLinksGroups">
-              <i class="fab fa-linkedin"></i>
-              <a href="http://www.linkedin.com/in/kevin-kilarski-386b74167">Kevin Kilarski</a>
+              <a href="http://www.linkedin.com/in/kevin-kilarski-386b74167">
+                <i class="fab fa-linkedin"><span class="sr-only">Visit my LinkedIn</span></i>
+                <p>Kevin Kilarski</p>
+              </a>
             </li>
 
           </ul>
