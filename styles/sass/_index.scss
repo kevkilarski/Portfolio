@@ -3,30 +3,9 @@ HEADER
 =========================*/
 
 header {
-  height: 100vh;
+  height: calc(100vh - 2.8rem);
   background: $primaryBlue;
   color: $primaryWhite;
-}
-
-.headerNavWrapper {
-  background: $primaryBlue;
-  position: sticky;
-  top: 0;
-  // box-shadow: 0 1rem 1rem rgba(39, 65, 105, 0.8);
-}
-
-.headerNavGroup {
-  width: 90%;
-  max-width: 60rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 0;
-}
-
-.headerNav p {
-  @include fontSize(22);
 }
 
 .headerNavIcons {
@@ -40,7 +19,7 @@ header .wrapper {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 90%;
+  height: 100%;
 }
 
 header button {
@@ -63,6 +42,36 @@ header i {
 
 
 
+
+
+/* ======================
+NAVIGATION BAR
+=========================*/
+
+.headerNavWrapper {
+  height: 2.8rem;
+  z-index: 10;
+  background: $primaryBlue;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+}
+
+.headerNavGroup {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primaryWhite;
+  height: 100%;
+}
+
+.headerNavGroup p {
+  @include fontSize(22);
+}
+
 /* ======================
 ABOUT ME
 =========================*/
@@ -78,8 +87,11 @@ ABOUT ME
   align-items: center;
 }
 
+
+
+
 .aboutMeContentImage {
-  width: 100%;
+  flex: 1 0 15rem;
 }
 
 .aboutMeContentImage img {
@@ -89,12 +101,19 @@ ABOUT ME
 
 .aboutMeContentText {
   margin-left: 2.5rem;
+  flex: 1 1 auto;
 }
+
+// .aboutMeSkills {
+//   padding-top: 3rem;
+// }
+
+
+
 
 .aboutMeName {
   position: relative;
   @include fontSize(30);
-  padding-bottom: 1.25rem;
   display: inline-block;
 }
 
@@ -108,13 +127,63 @@ ABOUT ME
   border-bottom: 3px solid $secondaryBlue;
 }
 
+.aboutMeContentText p:nth-child(2) {
+  padding: 2rem 0;
+}
+
+
+
+
+/* ======================
+SKILLS
+=========================*/
+
+.aboutMeSkills p {
+  @include fontSize(20);
+  font-weight: 400;
+  text-align: center;
+  padding: 0.4rem 0;
+  
+}
+
+.aboutMeSkillsIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.aboutMeSkillsIcons li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  // flex: 1 0 20%;
+  flex-grow: 1;
+  // flex-shrink: 0;
+  flex-basis: calc(100% / 6 - 1.5rem);
+  // border: 2px solid red;
+  // padding-bottom: 1rem;
+  color: $tertiaryBlue;
+}
+
+.aboutMeSkillsIcons li:hover {
+  color: $secondaryBlue;
+}
+
+.skills {
+  background-color: $primaryGrey;
+}
+
+
+
 
 /* ======================
 PROJECTS
 =========================*/
 
 .projects {
-  background: $primaryGrey;
+  background: $primaryWhite;
 }
 
 .projectsGroups {
@@ -122,9 +191,20 @@ PROJECTS
   align-items: center;
 }
 
+.projectsIcons {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
 .projectsIcons p {
   padding: 0.5rem 0;
   font-weight: 500;
+}
+
+.projectsButtons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .projectsButtons button {
@@ -140,17 +220,29 @@ PROJECTS
   flex: 1 1 70rem;
 }
 
+.projectsGroupsImgLeft {
+  text-align: right;
+}
+
 .projectsGroupsImgRight .projectsImages {
   margin-left: 3rem;
 }
 
 .projectsGroupsImgLeft {
-  margin: 5rem 0;
+  margin: 8rem 0;
+}
+
+.projectsGroupsImgLeft .projectsIcons {
+  justify-content: flex-end;
+}
+
+.projectsGroupsImgLeft .projectsButtons {
+  justify-content: flex-end;
 }
 
 .projectsGroupsImgLeft .projectsImages {
   margin-right: 3rem;
-  flex: 1 1 20rem;
+  flex: 1 1 65rem;
 }
 
 
@@ -166,19 +258,36 @@ CONTACT
 .contact .wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+
 }
 
 .contactGroups {
-  flex: 0 1 45%;
+  flex-basis: calc(100% / 2);
 }
 
-.contactText p {
-  padding: $paddingStandard;
+.contactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// .contactText p {
+//   padding: $paddingStandard;
+// }
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .contactLinksGroups {
   display: flex;
-  padding: 0.8rem 0;
+}
+
+.contactLinksGroup {
+  margin: 0;
 }
 
 .contactLinksGroups a {
@@ -186,7 +295,7 @@ CONTACT
 }
 
 .contactLinksGroups i {
-  flex: 0 1 2.5rem;
+  margin-right: 0.8rem;
 }
 
 .contactForm {
@@ -209,7 +318,8 @@ label {
 }
 
 .contactMessage {
-  height: 8rem;
+  height: 6rem;
+
 }
 
 .contactButton {
@@ -222,9 +332,41 @@ FOOTER
 =========================*/
 
 footer {
-  background: $primaryGrey;
+  background: $primaryWhite;
 }
 
 footer p {
   text-align: center;
+}
+
+
+
+
+
+/* ======================
+MEDIA QUERIES
+=========================*/
+
+@media (max-width: 940px) {
+  footer {
+    background-color: red;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    background-color: blue;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    background-color: green;
+  }
+}
+
+@media (max-width: 320px) {
+  footer {
+    background-color: rebeccapurple;
+  }
 }

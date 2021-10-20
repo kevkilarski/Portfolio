@@ -22,7 +22,7 @@ h2 {
 }
 
 h3 {
-  @include fontSize(32);
+  @include fontSize(35);
 }
 
 p {
@@ -117,10 +117,22 @@ img {
 
 header i {
   @include fontSize(30);
+}
+
+.headerNavWrapper i {
+  @include fontSize(30);
   color: $primaryWhite;
 }
 
-i {
+.skills i {
+  @include fontSize(55);
+}
+
+.projects i {
+  @include fontSize(28);
+}
+
+.contact i {
   @include fontSize(32);
 }
 
@@ -142,13 +154,13 @@ section {
 
 .sectionTitle {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
 .sectionStamp {
   display: inline-block;
   padding: 0.15rem 0.8rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
   background: $secondaryBlue;
 }
 

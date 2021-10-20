@@ -193,8 +193,8 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
-  font-size: 1.6rem;
+  font-size: 35px;
+  font-size: 1.75rem;
 }
 
 p {
@@ -245,10 +245,25 @@ img {
 header i {
   font-size: 30px;
   font-size: 1.5rem;
+}
+
+.headerNavWrapper i {
+  font-size: 30px;
+  font-size: 1.5rem;
   color: #f3f7fa;
 }
 
-i {
+.skills i {
+  font-size: 55px;
+  font-size: 2.75rem;
+}
+
+.projects i {
+  font-size: 28px;
+  font-size: 1.4rem;
+}
+
+.contact i {
   font-size: 32px;
   font-size: 1.6rem;
 }
@@ -271,13 +286,13 @@ section {
 
 .sectionTitle {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
 .sectionStamp {
   display: inline-block;
   padding: 0.15rem 0.8rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
   background: #3288c6;
 }
 
@@ -285,36 +300,9 @@ section {
 HEADER
 =========================*/
 header {
-  height: 100vh;
+  height: calc(100vh - 2.8rem);
   background: #274169;
   color: #f3f7fa;
-}
-
-.headerNavWrapper {
-  background: #274169;
-  position: sticky;
-  top: 0;
-}
-
-.headerNavGroup {
-  width: 90%;
-  max-width: 60rem;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.8rem 0;
-}
-
-.headerNav p {
-  font-size: 22px;
-  font-size: 1.1rem;
 }
 
 .headerNavIcons {
@@ -341,7 +329,7 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90%;
+  height: 100%;
 }
 
 header button {
@@ -372,6 +360,41 @@ header i {
 }
 
 /* ======================
+NAVIGATION BAR
+=========================*/
+.headerNavWrapper {
+  height: 2.8rem;
+  z-index: 10;
+  background: #274169;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+          box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+}
+
+.headerNavGroup {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f3f7fa;
+  height: 100%;
+}
+
+.headerNavGroup p {
+  font-size: 22px;
+  font-size: 1.1rem;
+}
+
+/* ======================
 ABOUT ME
 =========================*/
 .aboutMe {
@@ -395,7 +418,9 @@ ABOUT ME
 }
 
 .aboutMeContentImage {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 15rem;
+          flex: 1 0 15rem;
 }
 
 .aboutMeContentImage img {
@@ -405,13 +430,15 @@ ABOUT ME
 
 .aboutMeContentText {
   margin-left: 2.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .aboutMeName {
   position: relative;
   font-size: 30px;
   font-size: 1.5rem;
-  padding-bottom: 1.25rem;
   display: inline-block;
 }
 
@@ -425,11 +452,68 @@ ABOUT ME
   border-bottom: 3px solid #3288c6;
 }
 
+.aboutMeContentText p:nth-child(2) {
+  padding: 2rem 0;
+}
+
+/* ======================
+SKILLS
+=========================*/
+.aboutMeSkills p {
+  font-size: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.aboutMeSkillsIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.aboutMeSkillsIcons li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: calc(100% / 6 - 1.5rem);
+      flex-basis: calc(100% / 6 - 1.5rem);
+  color: #203a74;
+}
+
+.aboutMeSkillsIcons li:hover {
+  color: #3288c6;
+}
+
+.skills {
+  background-color: #eeeff0;
+}
+
 /* ======================
 PROJECTS
 =========================*/
 .projects {
-  background: #eeeff0;
+  background: #f3f7fa;
 }
 
 .projectsGroups {
@@ -441,9 +525,24 @@ PROJECTS
           align-items: center;
 }
 
+.projectsIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
 .projectsIcons p {
   padding: 0.5rem 0;
   font-weight: 500;
+}
+
+.projectsButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .projectsButtons button {
@@ -465,19 +564,35 @@ PROJECTS
           flex: 1 1 70rem;
 }
 
+.projectsGroupsImgLeft {
+  text-align: right;
+}
+
 .projectsGroupsImgRight .projectsImages {
   margin-left: 3rem;
 }
 
 .projectsGroupsImgLeft {
-  margin: 5rem 0;
+  margin: 8rem 0;
+}
+
+.projectsGroupsImgLeft .projectsIcons {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projectsGroupsImgLeft .projectsButtons {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projectsGroupsImgLeft .projectsImages {
   margin-right: 3rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20rem;
-          flex: 1 1 20rem;
+      -ms-flex: 1 1 65rem;
+          flex: 1 1 65rem;
 }
 
 /* ======================
@@ -495,23 +610,46 @@ CONTACT
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 2rem;
 }
 
 .contactGroups {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45%;
-          flex: 0 1 45%;
+  -ms-flex-preferred-size: calc(100% / 2);
+      flex-basis: calc(100% / 2);
 }
 
-.contactText p {
-  padding: 2rem 0;
+.contactText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
 }
 
 .contactLinksGroups {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.8rem 0;
+}
+
+.contactLinksGroup {
+  margin: 0;
 }
 
 .contactLinksGroups a {
@@ -519,9 +657,7 @@ CONTACT
 }
 
 .contactLinksGroups i {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 2.5rem;
-          flex: 0 1 2.5rem;
+  margin-right: 0.8rem;
 }
 
 .contactForm {
@@ -549,7 +685,7 @@ label {
 }
 
 .contactMessage {
-  height: 8rem;
+  height: 6rem;
 }
 
 .contactButton {
@@ -560,9 +696,33 @@ label {
 FOOTER
 =========================*/
 footer {
-  background: #eeeff0;
+  background: #f3f7fa;
 }
 
 footer p {
   text-align: center;
+}
+
+/* ======================
+MEDIA QUERIES
+=========================*/
+@media (max-width: 940px) {
+  footer {
+    background-color: red;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    background-color: blue;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    background-color: green;
+  }
+}
+@media (max-width: 320px) {
+  footer {
+    background-color: rebeccapurple;
+  }
 }
