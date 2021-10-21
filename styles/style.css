@@ -751,6 +751,7 @@ CONTACT
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: 2px solid #f3f7fa;
   background: transparent;
   color: #f3f7fa;
 }
@@ -761,6 +762,7 @@ CONTACT
 
 .contactButton {
   width: 8rem;
+  background: #f3f7fa;
 }
 
 .contactButton:hover {
@@ -945,7 +947,7 @@ MEDIA QUERIES
   }
 
   .headerNavGroup input[type=checkbox]:checked + .headerNavIcons {
-    height: 20vh;
+    height: 9rem;
     width: 16.5rem;
     background-color: #274169;
   }
