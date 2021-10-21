@@ -329,14 +329,14 @@ CONTACT
 .contact {
   // background: $primaryBlue;
   background-image: linear-gradient($secondaryBlue, $primaryBlue);
-
+  padding: 5.5rem 0 4rem 0;
   color: $primaryWhite;
 }
 
 .contact .wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1.5rem;
 
 }
 
@@ -419,11 +419,12 @@ FOOTER
 =========================*/
 
 footer {
-  background: $primaryWhite;
+  background: $primaryBlue;
 }
 
 footer p {
   text-align: center;
+  color: $primaryWhite;
   @include lineHeight(28);
 }
 
@@ -592,7 +593,10 @@ MEDIA QUERIES
     width: 80%;
   }
 
+  .headerNavGroup p {
+    cursor: default;
 
+  }
 
   .fa-bars {
     visibility: visible;
