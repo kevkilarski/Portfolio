@@ -458,21 +458,21 @@ MEDIA QUERIES
   //   gap: 0.5rem;
   // }
 
-  .aboutMeSkillsIcons li:nth-child(7) {
+  .aboutMeSkillsIcons li:nth-child(1n+7) {
     flex-basis: calc(100% / 2 - 1.5rem);
   }
 
-  .aboutMeSkillsIcons li:nth-child(8) {
-    flex-basis: calc(100% / 2 - 1.5rem);
-  }
+  // .aboutMeSkillsIcons li:nth-child(8) {
+  //   flex-basis: calc(100% / 2 - 1.5rem);
+  // }
 
-  .aboutMeSkillsIcons li:nth-child(9) {
-    flex-basis: calc(100% / 2 - 1.5rem);
-  }
+  // .aboutMeSkillsIcons li:nth-child(9) {
+  //   flex-basis: calc(100% / 2 - 1.5rem);
+  // }
 
-  .aboutMeSkillsIcons li:nth-child(10) {
-    flex-basis: calc(100% / 2 - 1.5rem);
-  }
+  // .aboutMeSkillsIcons li:nth-child(10) {
+  //   flex-basis: calc(100% / 2 - 1.5rem);
+  // }
 
 }
 
@@ -484,6 +484,10 @@ MEDIA QUERIES
   }
 
   .aboutMeSkillsIcons li {
+    flex-basis: 100%;
+  }
+
+  .aboutMeSkillsIcons li:nth-child(1n+7) {
     flex-basis: 100%;
   }
 }
