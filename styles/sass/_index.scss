@@ -80,7 +80,7 @@ NAVIGATION BAR
   height: 100%;
 }
 
-.headerNavGroup p {
+.headerNavGroup p:first-child {
   @include fontSize(22);
 }
 
@@ -230,6 +230,12 @@ PROJECTS
   display: flex;
   align-items: center;
   gap: 3rem;
+  
+  
+  // border: 3px solid $primaryGrey;
+  // background: $primaryWhite;
+  // padding: 2rem;
+  // border-radius: 2rem;
 }
 
 .projectsIcons {
@@ -282,7 +288,7 @@ PROJECTS
 }
 
 .projectsGroupsImgLeft {
-  margin: 8rem 0;
+  margin: 5rem 0;
 }
 
 .projectsGroupsImgLeft .projectsIcons {
@@ -376,7 +382,7 @@ CONTACT
   flex-direction: column;
 }
 
-label {
+.contact label {
   margin-bottom: 0.5rem;
 }
 
@@ -427,9 +433,9 @@ MEDIA QUERIES
 =========================*/
 
 @media (max-width: 1052px) {
-  p {
-    color: red;
-  }
+  // p {
+  //   color: red;
+  // }
 
   h1 {
     @include fontSize(80);
@@ -443,6 +449,91 @@ MEDIA QUERIES
   .aboutMeSkillsIcons li {
     flex-basis: calc(100% / 4 - 1.5rem);
   }
+
+  h3 {
+    @include fontSize(40);
+    // font-size: 300%;
+  }
+
+  .projectsGroups{
+    // display: block;
+    // width: 50%;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    // border: 3px solid $primaryGrey;
+    // background: $primaryGrey;
+    // padding: 2rem;
+    // border-radius: 2rem;
+  }
+
+  .projects {
+    background: $primaryWhite;
+  }
+
+  .projectsGroupsImgLeft {
+    margin: 8rem 0;
+  }
+
+  .projectsGroupsImgRight .projectsText {
+    order: 2;
+  }
+
+  .projectsText {
+    text-align: center;
+  }
+
+  .projectsIcons {
+    justify-content: center;
+  }
+  
+  .projectsLinks {
+    justify-content: center;
+  }
+
+  .projectsGroupsImgLeft .projectsIcons {
+    justify-content: center;
+  }
+  
+  .projectsGroupsImgLeft .projectsLinks {
+    justify-content: center;
+  }
+
+  .projectsImages {
+    width: 70%;
+  }
+
+  .projectsLinks a {
+    padding: 0.3rem 0.8rem;
+    background: $primaryBlue;
+    color: $primaryWhite;
+    font-weight: 400;
+    display: block;
+  }
+
+
+  // .contact h2 {
+  //   @include fontSize(40);
+  // }
+
+  .contact .wrapper {
+    flex-direction: column;
+  }
+
+  .contactText {
+    // text-align: center;
+    gap: 2rem;
+  }
+
+  // .contactLinks {
+  //   margin: 0 auto;
+  // }
+
+
+
+
+
+
 }
 
 
@@ -454,9 +545,9 @@ MEDIA QUERIES
 
 
 @media (max-width: 768px) {
-  p {
-    color: blue;
-  }
+  // p {
+  //   color: blue;
+  // }
 
   h1 {
     @include fontSize(58);
@@ -483,7 +574,70 @@ MEDIA QUERIES
   }
 
 
-  
+  .projectsImages {
+    width: 80%;
+  }
+
+
+
+  .fa-bars {
+    visibility: visible;
+    position: relative;
+    top: 0.1rem;
+  }
+
+  .headerNavIcons {
+    // flex-direction: column;
+    position: absolute;
+    top: 2.8rem;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    overflow: hidden;
+    height: 0;
+    background-color: $primaryWhite;
+    opacity: 0.9;
+}
+
+  .headerNavIcons li a {
+    margin-left: 1rem;
+    transition: all 0.1s;
+  }
+
+  .headerNavIcons li a:hover,
+  .headerNavIcons li a:focus {
+    background-color: $secondaryBlue;
+    color: $primaryWhite;
+  }
+
+  // .headerNavIcons a {
+  //   display: block;
+  //   width: 100%;
+  // }
+
+  .headerNavGroup input[type=checkbox]:checked + .headerNavIcons {
+    height: 20vh;
+    width: 16.5rem;
+    background-color: $primaryBlue;
+  }
+
+  .headerNavIcons {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .display {
+    display: inline
+  }
+
+  .headerNavIcons i:hover {
+    color: $primaryBlue;
+  }
+
+
+
+
 }
 
 
@@ -501,9 +655,9 @@ MEDIA QUERIES
 
 
 @media (max-width: 534px) {
-  p {
-    color: green;
-  }
+  // p {
+  //   color: green;
+  // }
 
   h1 {
     @include fontSize(38);
@@ -541,6 +695,46 @@ MEDIA QUERIES
   .aboutMeSkillsIcons li:nth-child(1n+7) {
     flex-basis: calc(100% / 2 - 1.5rem);
   }
+
+  h2 {
+    @include fontSize(32);
+  }
+
+  .sectionStamp {
+    padding: 0.15rem 0.4rem;
+  }
+
+  .projects i {
+    @include fontSize(23);
+  }
+
+  .projectsLinks {
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .projectsImages {
+    width: 90%;
+  }
+
+
+  .headerNavGroup p:first-child {
+    @include fontSize(20);
+    @include lineHeight(24);
+  }
+
+  .headerBlock {
+    display: block;
+  }
+
+
+
+  .footerBlockToggle {
+    display: block;
+  }
+
 }
 
 
@@ -550,9 +744,9 @@ MEDIA QUERIES
 
 
 @media (max-width: 348px) {
-  p {
-    color: orange;
-  }
+  // p {
+  //   color: orange;
+  // }
 
   h1 {
     @include fontSize(38);
@@ -583,12 +777,19 @@ MEDIA QUERIES
   .aboutMeSkillsIcons li:nth-child(1n+7) {
     flex-basis: 100%;
   }
+
+
+
+
+
+
+
 }
 
 @media (max-width: 320px) {
-  p {
-    color: rebeccapurple;
-  }
+  // p {
+  //   color: rebeccapurple;
+  // }
 }
 
 
