@@ -424,6 +424,7 @@ footer {
 
 footer p {
   text-align: center;
+  @include lineHeight(28);
 }
 
 
@@ -531,7 +532,18 @@ MEDIA QUERIES
   //   margin: 0 auto;
   // }
 
+  .contact .wrapper {
+    gap: 4rem;
+  }
 
+  .contactForm {
+    border: 3px solid $primaryWhite;
+    padding: 1rem;
+  }
+  
+  .contactButton {
+    margin: 0 auto;
+  }
 
 
 
@@ -586,6 +598,11 @@ MEDIA QUERIES
     visibility: visible;
     position: relative;
     top: 0.1rem;
+    cursor: pointer;
+  }
+
+  .fa-bars:hover {
+    color: $secondaryBlue;
   }
 
   .headerNavIcons {
@@ -603,7 +620,7 @@ MEDIA QUERIES
 
   .headerNavIcons li a {
     margin-left: 1rem;
-    transition: all 0.1s;
+    // transition: all 0.1s;
   }
 
   .headerNavIcons li a:hover,
@@ -635,6 +652,10 @@ MEDIA QUERIES
 
   .headerNavIcons i:hover {
     color: $primaryBlue;
+  }
+
+  .contactMessage {
+    height: 8rem;
   }
 
 
@@ -746,9 +767,9 @@ MEDIA QUERIES
 
 
 @media (max-width: 348px) {
-  // p {
-  //   color: orange;
-  // }
+  p {
+    color: orange;
+  }
 
   h1 {
     @include fontSize(38);
@@ -789,9 +810,9 @@ MEDIA QUERIES
 }
 
 @media (max-width: 320px) {
-  // p {
-  //   color: rebeccapurple;
-  // }
+  p {
+    color: rebeccapurple;
+  }
 }
 
 

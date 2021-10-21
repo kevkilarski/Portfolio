@@ -782,6 +782,8 @@ footer {
 
 footer p {
   text-align: center;
+  line-height: 28px;
+  line-height: 1.4rem;
 }
 
 /* ======================
@@ -881,6 +883,19 @@ MEDIA QUERIES
   .contactText {
     gap: 2rem;
   }
+
+  .contact .wrapper {
+    gap: 4rem;
+  }
+
+  .contactForm {
+    border: 3px solid #f3f7fa;
+    padding: 1rem;
+  }
+
+  .contactButton {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 768px) {
   h1 {
@@ -920,6 +935,11 @@ MEDIA QUERIES
     visibility: visible;
     position: relative;
     top: 0.1rem;
+    cursor: pointer;
+  }
+
+  .fa-bars:hover {
+    color: #3288c6;
   }
 
   .headerNavIcons {
@@ -936,8 +956,6 @@ MEDIA QUERIES
 
   .headerNavIcons li a {
     margin-left: 1rem;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
   }
 
   .headerNavIcons li a:hover,
@@ -969,6 +987,10 @@ MEDIA QUERIES
 
   .headerNavIcons i:hover {
     color: #274169;
+  }
+
+  .contactMessage {
+    height: 8rem;
   }
 }
 @media (max-width: 534px) {
@@ -1060,6 +1082,10 @@ MEDIA QUERIES
   }
 }
 @media (max-width: 348px) {
+  p {
+    color: orange;
+  }
+
   h1 {
     font-size: 38px;
     font-size: 1.9rem;
@@ -1093,5 +1119,10 @@ MEDIA QUERIES
   .aboutMeSkillsIcons li:nth-child(1n+7) {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+@media (max-width: 320px) {
+  p {
+    color: rebeccapurple;
   }
 }
