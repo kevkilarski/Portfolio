@@ -112,6 +112,7 @@ ABOUT ME
 .aboutMeContent {
   display: flex;
   align-items: center;
+  gap: 2.5rem;
 }
 
 
@@ -127,7 +128,6 @@ ABOUT ME
 }
 
 .aboutMeContentText {
-  margin-left: 2.5rem;
   flex: 1 1 auto;
 }
 
@@ -202,6 +202,7 @@ SKILLS
 
 .skills {
   background-color: $secondaryBlue;
+  // background-image: linear-gradient($primaryBlue, 1%, $secondaryBlue);
   // background: radial-gradient($primaryBlue, $secondaryBlue);
   // background: radial-gradient($secondaryBlue, $primaryBlue);
 }
@@ -430,58 +431,150 @@ MEDIA QUERIES
     color: red;
   }
 
+  h1 {
+    @include fontSize(80);
+    @include lineHeight(95);
+  }
+
+  .headerTitleButtons a {
+    padding: 0.4rem 1.4rem;
+  }
+
   .aboutMeSkillsIcons li {
     flex-basis: calc(100% / 4 - 1.5rem);
   }
 }
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   p {
     color: blue;
   }
 
+  h1 {
+    @include fontSize(58);
+    @include lineHeight(75);
+  }
+
+  .headerTitleButtons a {
+    padding: 0.3rem 1rem;
+  }
+
+
+
+  .aboutMeContent {
+    flex-direction: column;
+  }
+
+  .aboutMeContentImage {
+    flex-basis: 40%;
+    width: 50%;
+  }
+
   .aboutMeSkillsIcons li {
     flex-basis: calc(100% / 3 - 1.5rem);
   }
+
+
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 534px) {
   p {
     color: green;
   }
 
-  // .skills i {
-  //   @include fontSize(50);
-  // }
+  h1 {
+    @include fontSize(38);
+    @include lineHeight(55);
+  }
 
-  // .aboutMeSkillsIcons {
-  //   gap: 0.5rem;
-  // }
+  .headerTitleButtons {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .headerTitleButtons a {
+    margin: 0;
+    padding: 0.2rem 0.7rem;
+  }
+
+
+
+
+  .aboutMeContent {
+    flex-direction: column;
+  }
+
+  .aboutMeContentImage {
+    width: 65%;
+  }
+
+  .aboutMeName {
+    @include fontSize(25);
+  }
+
+  
 
   .aboutMeSkillsIcons li:nth-child(1n+7) {
     flex-basis: calc(100% / 2 - 1.5rem);
   }
-
-  // .aboutMeSkillsIcons li:nth-child(8) {
-  //   flex-basis: calc(100% / 2 - 1.5rem);
-  // }
-
-  // .aboutMeSkillsIcons li:nth-child(9) {
-  //   flex-basis: calc(100% / 2 - 1.5rem);
-  // }
-
-  // .aboutMeSkillsIcons li:nth-child(10) {
-  //   flex-basis: calc(100% / 2 - 1.5rem);
-  // }
-
 }
 
-// Find better way to do the above logic, so it doesn't affect the bottom mq
 
-@media (max-width: 345px) {
+
+
+
+
+
+@media (max-width: 348px) {
   p {
     color: orange;
   }
+
+  h1 {
+    @include fontSize(38);
+    @include lineHeight(50);
+  }
+
+  h1 .block {
+    @include fontSize(32);
+  }
+
+  .headerTitleButtons {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .blockToggle {
+    display: block;
+  }
+
+
+
 
   .aboutMeSkillsIcons li {
     flex-basis: 100%;

@@ -440,6 +440,7 @@ ABOUT ME
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2.5rem;
 }
 
 .aboutMeContentImage {
@@ -454,7 +455,6 @@ ABOUT ME
 }
 
 .aboutMeContentText {
-  margin-left: 2.5rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -777,6 +777,17 @@ MEDIA QUERIES
     color: red;
   }
 
+  h1 {
+    font-size: 80px;
+    font-size: 4rem;
+    line-height: 95px;
+    line-height: 4.75rem;
+  }
+
+  .headerTitleButtons a {
+    padding: 0.4rem 1.4rem;
+  }
+
   .aboutMeSkillsIcons li {
     -ms-flex-preferred-size: calc(100% / 4 - 1.5rem);
         flex-basis: calc(100% / 4 - 1.5rem);
@@ -785,6 +796,30 @@ MEDIA QUERIES
 @media (max-width: 768px) {
   p {
     color: blue;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-size: 2.9rem;
+    line-height: 75px;
+    line-height: 3.75rem;
+  }
+
+  .headerTitleButtons a {
+    padding: 0.3rem 1rem;
+  }
+
+  .aboutMeContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutMeContentImage {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    width: 50%;
   }
 
   .aboutMeSkillsIcons li {
@@ -797,14 +832,76 @@ MEDIA QUERIES
     color: green;
   }
 
+  h1 {
+    font-size: 38px;
+    font-size: 1.9rem;
+    line-height: 55px;
+    line-height: 2.75rem;
+  }
+
+  .headerTitleButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .headerTitleButtons a {
+    margin: 0;
+    padding: 0.2rem 0.7rem;
+  }
+
+  .aboutMeContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutMeContentImage {
+    width: 65%;
+  }
+
+  .aboutMeName {
+    font-size: 25px;
+    font-size: 1.25rem;
+  }
+
   .aboutMeSkillsIcons li:nth-child(1n+7) {
     -ms-flex-preferred-size: calc(100% / 2 - 1.5rem);
         flex-basis: calc(100% / 2 - 1.5rem);
   }
 }
-@media (max-width: 345px) {
+@media (max-width: 348px) {
   p {
     color: orange;
+  }
+
+  h1 {
+    font-size: 38px;
+    font-size: 1.9rem;
+    line-height: 50px;
+    line-height: 2.5rem;
+  }
+
+  h1 .block {
+    font-size: 32px;
+    font-size: 1.6rem;
+  }
+
+  .headerTitleButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .blockToggle {
+    display: block;
   }
 
   .aboutMeSkillsIcons li {
