@@ -14,11 +14,7 @@ header {
   // background-blend-mode: multiply;
 }
 
-.headerNavIcons {
-  display: flex;
-  justify-content: space-between;
-  width: 12%;
-}
+
 
 header .wrapper {
   display: flex;
@@ -54,7 +50,10 @@ header i {
   font-weight: 400;
 }
 
-
+.headerTitleButtons a:hover {
+  background-color: $primaryBlue;
+  color: $primaryWhite;
+}
 
 /* ======================
 NAVIGATION BAR
@@ -88,6 +87,16 @@ NAVIGATION BAR
 .headerTitleButtons {
   display: flex;
   gap: 2rem;
+}
+
+.headerNavIcons {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.headerNavIcons i:hover {
+  color: $secondaryBlue;
 }
 
 /* ======================
@@ -146,7 +155,7 @@ ABOUT ME
 }
 
 .aboutMeContentText p:nth-child(2) {
-  padding: 2rem 0;
+  padding: 1.2rem 0;
 }
 
 
@@ -182,18 +191,30 @@ SKILLS
   flex-basis: calc(100% / 6 - 1.5rem);
   // border: 2px solid red;
   // padding-bottom: 1rem;
-  color: $tertiaryBlue;
+  // color: $tertiaryBlue;
+  color: $primaryGrey;
+
 }
 
 .aboutMeSkillsIcons li:hover {
-  color: $secondaryBlue;
+  color: $primaryBlue;
 }
 
 .skills {
-  background-color: $primaryGrey;
+  background-color: $secondaryBlue;
+  // background: radial-gradient($primaryBlue, $secondaryBlue);
+  // background: radial-gradient($secondaryBlue, $primaryBlue);
 }
 
+.skills .sectionTitle {
+  color: $primaryGrey;
 
+}
+
+.skills .sectionStamp {
+  background: $primaryBlue;
+  color: $primaryWhite;
+}
 
 
 /* ======================
@@ -207,6 +228,7 @@ PROJECTS
 .projectsGroups {
   display: flex;
   align-items: center;
+  gap: 3rem;
 }
 
 .projectsIcons {
@@ -226,16 +248,28 @@ PROJECTS
 }
 
 .projectsButtons button {
-  background: $tertiaryBlue;
+  background: $primaryBlue;
   padding: 0.4rem 0.9rem;
   color: $primaryWhite;
   margin-top: 1rem;
 }
 
+.projectsItem {
+  // flex-basis: calc(100% / 2);
+}
+
+.projectsText {
+  flex-basis: 55%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
 .projectsImages {
   display: flex;
   align-items: center;
-  flex: 1 1 70rem;
+  // flex-basis: 70rem;
+  flex-basis: 45%;
+  flex-shrink: 0;
 }
 
 .projectsGroupsImgLeft {
@@ -243,7 +277,7 @@ PROJECTS
 }
 
 .projectsGroupsImgRight .projectsImages {
-  margin-left: 3rem;
+  // margin-left: 3rem;
 }
 
 .projectsGroupsImgLeft {
@@ -254,13 +288,30 @@ PROJECTS
   justify-content: flex-end;
 }
 
-.projectsGroupsImgLeft .projectsButtons {
+.projectsGroupsImgLeft .projectsLinks {
   justify-content: flex-end;
 }
 
 .projectsGroupsImgLeft .projectsImages {
-  margin-right: 3rem;
-  flex: 1 1 65rem;
+  // margin-right: 3rem;
+  // flex: 1 1 65rem;
+}
+
+.projectsLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projectsLinks a {
+  padding: 0.3rem 0.8rem;
+  background: $primaryBlue;
+  color: $primaryWhite;
+  font-weight: 400;
+}
+
+.projectsLinks a:hover {
+  background: $secondaryBlue;
 }
 
 
@@ -346,6 +397,13 @@ label {
   width: 8rem;
 }
 
+.contactButton:hover {
+  background-color: $secondaryBlue;
+}
+
+.contactLinksGroups a:hover {
+  color: $secondaryBlue;
+}
 
 /* ======================
 FOOTER
@@ -367,26 +425,101 @@ footer p {
 MEDIA QUERIES
 =========================*/
 
-@media (max-width: 940px) {
-  footer {
-    background-color: red;
+@media (max-width: 1052px) {
+  p {
+    color: red;
+  }
+
+  .aboutMeSkillsIcons li {
+    flex-basis: calc(100% / 4 - 1.5rem);
   }
 }
 
 @media (max-width: 768px) {
-  footer {
-    background-color: blue;
+  p {
+    color: blue;
+  }
+
+  .aboutMeSkillsIcons li {
+    flex-basis: calc(100% / 3 - 1.5rem);
   }
 }
 
-@media (max-width: 480px) {
-  footer {
-    background-color: green;
+@media (max-width: 534px) {
+  p {
+    color: green;
+  }
+
+  // .skills i {
+  //   @include fontSize(50);
+  // }
+
+  // .aboutMeSkillsIcons {
+  //   gap: 0.5rem;
+  // }
+
+  .aboutMeSkillsIcons li:nth-child(7) {
+    flex-basis: calc(100% / 2 - 1.5rem);
+  }
+
+  .aboutMeSkillsIcons li:nth-child(8) {
+    flex-basis: calc(100% / 2 - 1.5rem);
+  }
+
+  .aboutMeSkillsIcons li:nth-child(9) {
+    flex-basis: calc(100% / 2 - 1.5rem);
+  }
+
+  .aboutMeSkillsIcons li:nth-child(10) {
+    flex-basis: calc(100% / 2 - 1.5rem);
+  }
+
+}
+
+// Find better way to do the above logic, so it doesn't affect the bottom mq
+
+@media (max-width: 345px) {
+  p {
+    color: orange;
+  }
+
+  .aboutMeSkillsIcons li {
+    flex-basis: 100%;
   }
 }
 
 @media (max-width: 320px) {
-  footer {
-    background-color: rebeccapurple;
+  p {
+    color: rebeccapurple;
   }
 }
+
+
+
+
+
+
+
+// @media (max-width: 940px) {
+//   p {
+//     color: red;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   p {
+//     color: blue;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   p {
+//     color: green;
+//   }
+// }
+
+// @media (max-width: 320px) {
+//   p {
+//     color: rebeccapurple;
+//   }
+// }
