@@ -309,6 +309,10 @@ input[type=checkbox] {
   display: none;
 }
 
+.headerMedia {
+  display: none;
+}
+
 /* ======================
 HEADER
 =========================*/
@@ -376,6 +380,14 @@ header i {
   color: #f3f7fa;
 }
 
+.headerDesktop {
+  cursor: default;
+}
+
+.headerMedia {
+  cursor: default;
+}
+
 /* ======================
 NAVIGATION BAR
 =========================*/
@@ -432,6 +444,32 @@ NAVIGATION BAR
   color: #3288c6;
 }
 
+.headerDesktop {
+  position: relative;
+}
+
+.headerMedia {
+  position: relative;
+}
+
+.headerDesktop:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  border-bottom: 2px solid #3288c6;
+}
+
+.headerMedia:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  border-bottom: 0.15rem solid #3288c6;
+}
+
 /* ======================
 ABOUT ME
 =========================*/
@@ -474,20 +512,22 @@ ABOUT ME
 }
 
 .aboutMeName {
-  position: relative;
   font-size: 30px;
   font-size: 1.5rem;
+}
+
+.aboutMeBlockToggle {
+  position: relative;
   display: inline-block;
 }
 
-.aboutMeName::before {
+.aboutMeBlockToggle::before {
   content: "";
   position: absolute;
-  top: 0.8rem;
-  left: 5rem;
+  left: 0rem;
   right: 0rem;
-  height: 1rem;
-  border-bottom: 3px solid #3288c6;
+  bottom: -0.15rem;
+  border-bottom: 0.15rem solid #3288c6;
 }
 
 .aboutMeContentText p:nth-child(2) {
@@ -779,6 +819,7 @@ FOOTER
 =========================*/
 footer {
   background: #274169;
+  padding: 1rem 0;
 }
 
 footer p {
@@ -893,10 +934,15 @@ MEDIA QUERIES
   .contactForm {
     border: 3px solid #f3f7fa;
     padding: 1rem;
+    border-radius: 0.4rem;
   }
 
   .contactButton {
     margin: 0 auto;
+  }
+
+  .sectionTitle {
+    padding-bottom: 2.4rem;
   }
 }
 @media (max-width: 768px) {
@@ -909,6 +955,23 @@ MEDIA QUERIES
 
   .headerTitleButtons a {
     padding: 0.3rem 1rem;
+  }
+
+  .headerDesktop {
+    display: none;
+  }
+
+  .headerMedia {
+    display: inline;
+    font-size: 22px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+  }
+
+  .headerMediaKK {
+    font-weight: 600;
   }
 
   .aboutMeContent {
@@ -933,10 +996,6 @@ MEDIA QUERIES
     width: 80%;
   }
 
-  .headerNavGroup p {
-    cursor: default;
-  }
-
   .fa-bars {
     visibility: visible;
     position: relative;
@@ -957,11 +1016,14 @@ MEDIA QUERIES
     overflow: hidden;
     height: 0;
     background-color: #f3f7fa;
-    opacity: 0.9;
+  }
+
+  .headerNavIcons li a p {
+    cursor: pointer;
   }
 
   .headerNavIcons li a {
-    margin-left: 1rem;
+    padding-left: 1rem;
   }
 
   .headerNavIcons li a:hover,
@@ -984,7 +1046,7 @@ MEDIA QUERIES
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .display {
@@ -993,6 +1055,10 @@ MEDIA QUERIES
 
   .headerNavIcons i:hover {
     color: #274169;
+  }
+
+  .contact {
+    padding: 4.5rem 0;
   }
 
   .contactMessage {
@@ -1037,9 +1103,14 @@ MEDIA QUERIES
     font-size: 1.25rem;
   }
 
-  .aboutMeSkillsIcons li:nth-child(1n+7) {
-    -ms-flex-preferred-size: calc(100% / 2 - 1.5rem);
-        flex-basis: calc(100% / 2 - 1.5rem);
+  .aboutMeSkillsIcons li {
+    border-radius: 2rem;
+    padding: 0.5rem;
+  }
+
+  .aboutMeSkillsIcons li {
+    -ms-flex-preferred-size: calc(100% / 2 - 3.5rem);
+        flex-basis: calc(100% / 2 - 3.5rem);
   }
 
   h2 {
@@ -1087,6 +1158,12 @@ MEDIA QUERIES
     display: block;
   }
 }
+@media (max-width: 375px) {
+  .aboutMeSkillsIcons li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
 @media (max-width: 348px) {
   p {
     color: orange;
@@ -1118,11 +1195,6 @@ MEDIA QUERIES
   }
 
   .aboutMeSkillsIcons li {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-
-  .aboutMeSkillsIcons li:nth-child(1n+7) {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
