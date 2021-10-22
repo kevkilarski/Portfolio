@@ -822,7 +822,7 @@ MEDIA QUERIES
   }
 
 
-  .headerNavGroup p:first-child {
+  .headerDesktop {
     @include fontSize(20);
     @include lineHeight(24);
   }
@@ -850,9 +850,9 @@ MEDIA QUERIES
 
 
 @media (max-width: 348px) {
-  p {
-    color: orange;
-  }
+  // p {
+  //   color: orange;
+  // }
 
   h1 {
     @include fontSize(38);
@@ -891,9 +891,9 @@ MEDIA QUERIES
 }
 
 @media (max-width: 320px) {
-  p {
-    color: rebeccapurple;
-  }
+  // p {
+  //   color: rebeccapurple;
+  // }
 }
 
 

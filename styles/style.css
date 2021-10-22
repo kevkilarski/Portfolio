@@ -294,6 +294,7 @@ section {
   padding: 0.15rem 0.8rem;
   margin-bottom: 0.5rem;
   background: #3288c6;
+  color: #f3f7fa;
 }
 
 .fa-bars {
@@ -1143,7 +1144,7 @@ MEDIA QUERIES
     width: 90%;
   }
 
-  .headerNavGroup p:first-child {
+  .headerDesktop {
     font-size: 20px;
     font-size: 1rem;
     line-height: 24px;
@@ -1165,10 +1166,6 @@ MEDIA QUERIES
   }
 }
 @media (max-width: 348px) {
-  p {
-    color: orange;
-  }
-
   h1 {
     font-size: 38px;
     font-size: 1.9rem;
@@ -1197,10 +1194,5 @@ MEDIA QUERIES
   .aboutMeSkillsIcons li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-  }
-}
-@media (max-width: 320px) {
-  p {
-    color: rebeccapurple;
   }
 }
