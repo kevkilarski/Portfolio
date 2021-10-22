@@ -848,6 +848,11 @@ MEDIA QUERIES
 
 
 
+@media (max-width: 393px) {
+  .aboutMeSkillsIcons li {
+    flex-basis: 100%;
+  }
+}
 
 @media (max-width: 348px) {
   // p {
@@ -876,9 +881,7 @@ MEDIA QUERIES
 
 
 
-  .aboutMeSkillsIcons li {
-    flex-basis: 100%;
-  }
+
 
   
 

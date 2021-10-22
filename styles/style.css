@@ -1165,6 +1165,12 @@ MEDIA QUERIES
         flex-basis: 100%;
   }
 }
+@media (max-width: 393px) {
+  .aboutMeSkillsIcons li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
 @media (max-width: 348px) {
   h1 {
     font-size: 38px;
@@ -1189,10 +1195,5 @@ MEDIA QUERIES
 
   .blockToggle {
     display: block;
-  }
-
-  .aboutMeSkillsIcons li {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
   }
 }
