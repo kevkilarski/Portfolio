@@ -133,6 +133,7 @@ NAVIGATION BAR
   border-bottom: 0.15rem solid $secondaryBlue;
 }
 
+
 /* ======================
 ABOUT ME
 =========================*/
@@ -663,14 +664,15 @@ MEDIA QUERIES
 
   .headerNavIcons {
     // flex-direction: column;
-    position: absolute;
+    position: fixed;
+    left: 0;
     top: 2.8rem;
     bottom: 0;
     right: 0;
     z-index: 10;
     overflow: hidden;
     height: 0;
-    background-color: $primaryWhite;
+    // background-color: $primaryWhite;
 }
 
   .headerNavIcons li a p {
@@ -682,23 +684,23 @@ MEDIA QUERIES
     // transition: all 0.1s;
   }
 
-  .headerNavIcons li a:hover,
-  .headerNavIcons li a:focus {
-    background-color: $secondaryBlue;
-    color: $primaryWhite;
+  // .headerNavIcons li a:hover,
+  // .headerNavIcons li a:focus {
+  //   background-color: $secondaryBlue;
+  //   color: $primaryWhite;
     
-  }
+  // }
 
   // .headerNavIcons a {
   //   display: block;
   //   width: 100%;
   // }
 
-  .headerNavGroup input[type=checkbox]:checked + .headerNavIcons {
-    height: 9rem;
-    width: 16.5rem;
-    background-color: $primaryBlue;
-  }
+  // .headerNavGroup input[type=checkbox]:checked + .headerNavIcons {
+  //   height: 9rem;
+  //   width: 16.5rem;
+  //   background-color: $primaryBlue;
+  // }
 
   .headerNavIcons {
     flex-direction: column;
@@ -722,6 +724,76 @@ MEDIA QUERIES
     height: 8rem;
   }
 
+
+
+
+
+
+
+.navToggleContainer {
+  cursor: pointer;
+  position: fixed;
+  right: 1.9rem;
+  top: 0.7rem;
+  width: 2rem;
+  height: 2rem;
+  // background-color: red;
+}
+
+  .navToggleBar {
+
+    height: 0.2rem;
+    width: 1.8rem;
+    background-color: white;
+    color: white;
+    position: fixed;
+    right: 2rem;
+    top: 1.3rem;
+  }
+
+  .navBar1 {
+    top: 0.8rem;
+    transition: 0.5s;
+  }
+
+  .navBar2 {
+    transition: 0.5s;
+  }
+
+  .navBar3 {
+    top: 1.8rem;
+    transition: 0.5s;
+  }
+
+  .topTransform {
+    transform: rotate(45deg);
+    top: 1.42rem;
+  }
+
+  .middleTransform {
+    background-color: transparent;
+  }
+
+  .bottomTransform {
+    transform: rotate(-45deg);
+    top: 1.38rem;
+  }
+
+  .headerNavIcons {
+    transition: 0.5s;
+  }
+
+  .navExpanded {
+    height: 10rem;
+    position: fixed;
+    left: 0;
+    background: $primaryBlue;
+
+  }
+
+  .fa-arrow-down {
+    cursor: pointer;
+  }
 
 
 
@@ -928,3 +1000,5 @@ MEDIA QUERIES
 //     color: rebeccapurple;
 //   }
 // }
+
+

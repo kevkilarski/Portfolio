@@ -13,13 +13,24 @@
 </head>
 <body>
 
-  <div class="headerNavWrapper">  
+
+
+  <div class="headerNavWrapper"> 
+  
+  <div class="navToggleContainer" id="threeBars">
+    <div class="navToggleBar navBar1" id="navBar1"></div>
+    <div class="navToggleBar navBar2" id="navBar2"></div>
+    <div class="navToggleBar navBar3" id="navBar3"></div>
+  </div>
+
     <nav class="headerNavGroup">
+
       <p class="headerMedia">&lt;<span class="headerMediaKK">KK</span>/&gt</p>
       <p class="headerDesktop"><span class="headerBlock"><strong>Kevin Kilarski</strong></span> Web Developer</p>
-      <label for="navMobileMenu"><i class="fa fa-bars"></i></label>
-      <input type="checkbox" id="navMobileMenu" name="toggle">
-      <ul class="headerNavIcons">
+      <!-- <label for="navMobileMenu"><i class="fa fa-bars" id="threeBars"></i></label>
+      <input type="checkbox" id="navMobileMenu" name="toggle"> -->
+
+      <ul class="headerNavIcons" id="nav" >
         <li class="contactLinksGroups">
           <a href="mailto:kskilarski@gmail.com">
             <i class="fas fa-envelope"><span class="sr-only">Send me an email</span></i>
@@ -41,7 +52,9 @@
           </a>
         </li>
       </ul>
+
     </nav>
+
   </div>
 
 
@@ -67,7 +80,7 @@
         </div>
       </div>
       
-      <i class="fas fa-arrow-down"><span class="sr-only">View the about me section</span></i>
+      <i class="fas fa-arrow-down" id="arrowScroll"><span class="sr-only">View the about me section</span></i>
     </div>
 
 
@@ -317,6 +330,8 @@
       <p>Developed by <span class="footerBlockToggle">Kevin Kilarski © 2021</span></p>
     </div>
   </footer>
+
+  <script src="./scripts/script.js"></script>
 
 </body>
 </html>
