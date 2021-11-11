@@ -2,10 +2,10 @@
 const app = {};
 
 // Storing elements in namespace elements
-app.threeBars = document.querySelector('#threeBars');
-app.topBar = document.querySelector('#navBar1');
-app.middleBar = document.querySelector('#navBar2');
-app.bottomBar = document.querySelector('#navBar3');
+app.threeBars = document.querySelector('#mobileHamContainer');
+app.topBar = document.querySelector('#mobileHamBar1');
+app.middleBar = document.querySelector('#mobileHamBar2');
+app.bottomBar = document.querySelector('#mobileHamBar3');
 app.nav = document.querySelector('#nav');
 
 app.arrow = document.querySelector('#arrowScroll')

@@ -310,10 +310,6 @@ input[type=checkbox] {
   display: none;
 }
 
-.headerMedia {
-  display: none;
-}
-
 /* ======================
 HEADER
 =========================*/
@@ -368,7 +364,7 @@ header i {
   margin-top: -2rem;
 }
 
-.headerTitleButtons a {
+.headerButtons a {
   margin-top: 1.8rem;
   padding: 0.6rem 1.8rem;
   background: #f3f7fa;
@@ -376,36 +372,37 @@ header i {
   font-weight: 400;
 }
 
-.headerTitleButtons a:hover {
+.headerButtons a:hover {
   background-color: #274169;
   color: #f3f7fa;
 }
 
-.headerDesktop {
+.nameDesktop {
   cursor: default;
 }
 
-.headerMedia {
+.mobileName {
   cursor: default;
 }
 
 /* ======================
 NAVIGATION BAR
 =========================*/
-.headerNavWrapper {
-  height: 2.8rem;
-  z-index: 10;
-  background: #274169;
+.topNavContainer {
   position: sticky;
   top: 0;
+  height: 2.8rem;
+  background-color: #274169;
   -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
           box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+  z-index: 10;
 }
 
-.headerNavGroup {
-  width: 90%;
-  max-width: 60rem;
-  margin: 0 auto;
+.topNavContainer .wrapper {
+  height: 100%;
+}
+
+.topNavBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,19 +416,19 @@ NAVIGATION BAR
   height: 100%;
 }
 
-.headerNavGroup p:first-child {
+.topNavBar p:first-child {
   font-size: 22px;
   font-size: 1.1rem;
 }
 
-.headerTitleButtons {
+.headerButtons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
 
-.headerNavIcons {
+.topNavLinksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,19 +438,23 @@ NAVIGATION BAR
   gap: 2.5rem;
 }
 
-.headerNavIcons i:hover {
+.topNavIcons i:hover {
   color: #3288c6;
 }
 
-.headerDesktop {
+.mobileName {
+  display: none;
+}
+
+.nameDesktop {
   position: relative;
 }
 
-.headerMedia {
+.mobileName {
   position: relative;
 }
 
-.headerDesktop:hover::before {
+.nameDesktop:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -462,7 +463,7 @@ NAVIGATION BAR
   border-bottom: 2px solid #3288c6;
 }
 
-.headerMedia:hover::before {
+.mobileName:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -741,7 +742,7 @@ CONTACT
           justify-content: space-between;
 }
 
-.contactLinks {
+.topNavLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,7 +753,7 @@ CONTACT
   gap: 0.8rem;
 }
 
-.contactLinksGroups a {
+.topNavLink a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -761,15 +762,15 @@ CONTACT
           align-items: center;
 }
 
-.contactLinksGroup {
+.topNavLink {
   margin: 0;
 }
 
-.contactLinksGroups a {
+.topNavLink a {
   color: #f3f7fa;
 }
 
-.contactLinksGroups i {
+.topNavLink i {
   margin-right: 0.8rem;
 }
 
@@ -811,7 +812,7 @@ CONTACT
   background-color: #3288c6;
 }
 
-.contactLinksGroups a:hover {
+.topNavLinks a:hover {
   color: #3288c6;
 }
 
@@ -841,7 +842,7 @@ MEDIA QUERIES
     line-height: 4.75rem;
   }
 
-  .headerTitleButtons a {
+  .headerButtons a {
     padding: 0.4rem 1.4rem;
   }
 
@@ -954,15 +955,15 @@ MEDIA QUERIES
     line-height: 3.75rem;
   }
 
-  .headerTitleButtons a {
+  .headerButtons a {
     padding: 0.3rem 1rem;
   }
 
-  .headerDesktop {
+  .nameDesktop {
     display: none;
   }
 
-  .headerMedia {
+  .mobileName {
     display: inline;
     font-size: 22px;
     font-size: 1.1rem;
@@ -971,7 +972,7 @@ MEDIA QUERIES
     font-weight: 200;
   }
 
-  .headerMediaKK {
+  .mobileNameKK {
     font-weight: 600;
   }
 
@@ -1008,7 +1009,7 @@ MEDIA QUERIES
     color: #3288c6;
   }
 
-  .headerNavIcons {
+  .topNavLinksContainer {
     position: fixed;
     left: 0;
     top: 2.8rem;
@@ -1019,15 +1020,15 @@ MEDIA QUERIES
     height: 0;
   }
 
-  .headerNavIcons li a p {
+  .topNavLinksContainer li a p {
     cursor: pointer;
   }
 
-  .headerNavIcons li a {
+  .topNavLinksContainer li a {
     padding-left: 1rem;
   }
 
-  .headerNavIcons {
+  .topNavLinksContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1042,7 +1043,7 @@ MEDIA QUERIES
     display: inline;
   }
 
-  .headerNavIcons i:hover {
+  .topNavLinksContainer i:hover {
     color: #274169;
   }
 
@@ -1054,7 +1055,7 @@ MEDIA QUERIES
     height: 8rem;
   }
 
-  .navToggleContainer {
+  .mobileHamContainer {
     cursor: pointer;
     position: fixed;
     right: 1.9rem;
@@ -1063,7 +1064,7 @@ MEDIA QUERIES
     height: 2rem;
   }
 
-  .navToggleBar {
+  .mobileHamBars {
     height: 0.2rem;
     width: 1.8rem;
     background-color: white;
@@ -1073,18 +1074,18 @@ MEDIA QUERIES
     top: 1.3rem;
   }
 
-  .navBar1 {
+  .mobileHamBar1 {
     top: 0.8rem;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
 
-  .navBar2 {
+  .mobileHamBar2 {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
 
-  .navBar3 {
+  .mobileHamBar3 {
     top: 1.8rem;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -1106,7 +1107,7 @@ MEDIA QUERIES
     top: 1.38rem;
   }
 
-  .headerNavIcons {
+  .topNavLinksContainer {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
@@ -1130,7 +1131,7 @@ MEDIA QUERIES
     line-height: 2.75rem;
   }
 
-  .headerTitleButtons {
+  .headerButtons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1139,7 +1140,7 @@ MEDIA QUERIES
     margin-top: 1.5rem;
   }
 
-  .headerTitleButtons a {
+  .headerButtons a {
     margin: 0;
     padding: 0.2rem 0.7rem;
   }
@@ -1200,15 +1201,11 @@ MEDIA QUERIES
     width: 90%;
   }
 
-  .headerDesktop {
+  .nameDesktop {
     font-size: 20px;
     font-size: 1rem;
     line-height: 24px;
     line-height: 1.2rem;
-  }
-
-  .headerBlock {
-    display: block;
   }
 
   .footerBlockToggle {
@@ -1240,7 +1237,7 @@ MEDIA QUERIES
     font-size: 1.6rem;
   }
 
-  .headerTitleButtons {
+  .headerButtons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
