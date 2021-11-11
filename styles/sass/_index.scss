@@ -157,16 +157,16 @@ ABOUT ME
 
 
 
-.aboutMeContentImage {
+.aboutMeImage {
   flex: 1 0 15rem;
 }
 
-.aboutMeContentImage img {
+.aboutMeImage img {
   border-radius: 10rem;
   border: 0.25rem solid $tertiaryBlue;
 }
 
-.aboutMeContentText {
+.aboutMeText {
   flex: 1 1 auto;
 }
 
@@ -193,7 +193,7 @@ ABOUT ME
   border-bottom: 0.15rem solid $secondaryBlue;
 }
 
-.aboutMeContentText p:nth-child(2) {
+.aboutMeText p:nth-child(2) {
   padding: 1.2rem 0;
 }
 
@@ -204,22 +204,21 @@ ABOUT ME
 SKILLS
 =========================*/
 
-.aboutMeSkills p {
+.skillsIcons p {
   @include fontSize(20);
   font-weight: 400;
   text-align: center;
   padding: 0.4rem 0;
-  
 }
 
-.aboutMeSkillsIcons {
+.skillsIconsContainer {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-.aboutMeSkillsIcons li {
+.skillsIcons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -235,7 +234,7 @@ SKILLS
 
 }
 
-.aboutMeSkillsIcons li:hover {
+.skillsIcons:hover {
   color: $primaryBlue;
 }
 
@@ -389,30 +388,26 @@ CONTACT
   justify-content: space-between;
 }
 
-// .contactText p {
-//   padding: $paddingStandard;
-// }
-
-.topNavLink {
+.topNavLinks {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.topNavLink a {
+.topNavLinks a {
   display: flex;
   align-items: center;
 }
 
-.topNavLink {
+.topNavLinks {
   margin: 0;
 }
 
-.topNavLink a {
+.topNavLinks a {
   color: $primaryWhite;
 }
 
-.topNavLink i {
+.topNavLinks i {
   margin-right: 0.8rem;
 }
 
@@ -490,7 +485,7 @@ MEDIA QUERIES
     padding: 0.4rem 1.4rem;
   }
 
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
     flex-basis: calc(100% / 4 - 1.5rem);
   }
 
@@ -639,12 +634,12 @@ MEDIA QUERIES
     flex-direction: column;
   }
 
-  .aboutMeContentImage {
+  .aboutMeImage {
     flex-basis: 40%;
     width: 50%;
   }
 
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
     flex-basis: calc(100% / 3 - 1.5rem);
   }
 
@@ -849,7 +844,7 @@ MEDIA QUERIES
     flex-direction: column;
   }
 
-  .aboutMeContentImage {
+  .aboutMeImage {
     width: 65%;
   }
 
@@ -857,16 +852,12 @@ MEDIA QUERIES
     @include fontSize(25);
   }
 
-  .aboutMeSkillsIcons {
-    
-  }
-
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
    border-radius: 2rem;
    padding: 0.5rem;
   }
 
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
     flex-basis: calc(100% / 2 - 3.5rem);
   }
 
@@ -915,7 +906,7 @@ MEDIA QUERIES
 
 
 @media (max-width: 375px) {
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
     flex-basis: 100%;
   }
 }
@@ -923,7 +914,7 @@ MEDIA QUERIES
 
 
 @media (max-width: 393px) {
-  .aboutMeSkillsIcons li {
+  .skillsIcons {
     flex-basis: 100%;
   }
 }
