@@ -724,11 +724,6 @@ CONTACT
   gap: 1.5rem;
 }
 
-.contactGroups {
-  -ms-flex-preferred-size: calc(100% / 2);
-      flex-basis: calc(100% / 2);
-}
-
 .contactText {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -740,9 +735,11 @@ CONTACT
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-preferred-size: calc(100% / 2);
+      flex-basis: calc(100% / 2);
 }
 
-.topNavLinks {
+.contactLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,7 +750,7 @@ CONTACT
   gap: 0.8rem;
 }
 
-.topNavLinks a {
+.contactLinks a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -762,15 +759,15 @@ CONTACT
           align-items: center;
 }
 
-.topNavLinks {
+.contactLinks {
   margin: 0;
 }
 
-.topNavLinks a {
+.contactLinks a {
   color: #f3f7fa;
 }
 
-.topNavLinks i {
+.contactLinks i {
   margin-right: 0.8rem;
 }
 
@@ -812,7 +809,7 @@ CONTACT
   background-color: #3288c6;
 }
 
-.topNavLinks a:hover {
+.contactLinks a:hover {
   color: #3288c6;
 }
 

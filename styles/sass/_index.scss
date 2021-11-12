@@ -378,36 +378,35 @@ CONTACT
 
 }
 
-.contactGroups {
-  flex-basis: calc(100% / 2);
-}
+
 
 .contactText {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-basis: calc(100% / 2);
 }
 
-.topNavLinks {
+.contactLinks {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.topNavLinks a {
+.contactLinks a {
   display: flex;
   align-items: center;
 }
 
-.topNavLinks {
+.contactLinks {
   margin: 0;
 }
 
-.topNavLinks a {
+.contactLinks a {
   color: $primaryWhite;
 }
 
-.topNavLinks i {
+.contactLinks i {
   margin-right: 0.8rem;
 }
 
@@ -444,7 +443,7 @@ CONTACT
   background-color: $secondaryBlue;
 }
 
-.topNavLinks a:hover {
+.contactLinks a:hover {
   color: $secondaryBlue;
 }
 
