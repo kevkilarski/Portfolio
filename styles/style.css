@@ -202,6 +202,10 @@ p {
   line-height: 1.6rem;
 }
 
+a {
+  font-weight: 400;
+}
+
 /* ======================
 GENERAL
 =========================*/
@@ -310,6 +314,68 @@ input[type=checkbox] {
   display: none;
 }
 
+.desktopName, .mobileName {
+  cursor: default;
+}
+
+/* ======================
+NAVIGATION BAR
+=========================*/
+.topNavContainer {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 2.8rem;
+  background-color: #274169;
+  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+          box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+}
+
+.topNavContainer .wrapper {
+  height: 100%;
+}
+
+.topNavBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #f3f7fa;
+}
+
+.topNavLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.mobileName {
+  display: none;
+}
+
+.desktopName {
+  position: relative;
+}
+
+.desktopName:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  border-bottom: 2px solid #3288c6;
+}
+
 /* ======================
 HEADER
 =========================*/
@@ -337,14 +403,6 @@ header .wrapper {
   height: 100%;
 }
 
-header button {
-  margin-top: 2rem;
-}
-
-header i {
-  padding: 1rem 0;
-}
-
 .headerTitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,72 +411,14 @@ header i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
-  text-align: center;
-  margin-top: -2rem;
-}
-
-.headerButtons a {
-  margin-top: 1.8rem;
-  padding: 0.6rem 1.8rem;
-  background: #f3f7fa;
-  color: black;
-  font-weight: 400;
-}
-
-.headerButtons a:hover {
-  background-color: #274169;
-  color: #f3f7fa;
-}
-
-.nameDesktop {
-  cursor: default;
-}
-
-.mobileName {
-  cursor: default;
-}
-
-/* ======================
-NAVIGATION BAR
-=========================*/
-.topNavContainer {
-  position: sticky;
-  top: 0;
-  height: 2.8rem;
-  background-color: #274169;
-  -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
-          box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
-  z-index: 10;
-}
-
-.topNavContainer .wrapper {
-  height: 100%;
-}
-
-.topNavBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f3f7fa;
   height: 100%;
-}
-
-.topNavBar p:first-child {
-  font-size: 22px;
-  font-size: 1.1rem;
+  text-align: center;
 }
 
 .headerButtons {
@@ -428,48 +428,20 @@ NAVIGATION BAR
   gap: 2rem;
 }
 
-.topNavLinksContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 2.5rem;
+.headerButtons a {
+  margin-top: 1.8rem;
+  padding: 0.6rem 1.8rem;
+  background: #f3f7fa;
+  color: black;
 }
 
-.topNavIcons i:hover {
-  color: #3288c6;
+.headerButtons a:hover {
+  background-color: #274169;
+  color: #f3f7fa;
 }
 
-.mobileName {
-  display: none;
-}
-
-.nameDesktop {
-  position: relative;
-}
-
-.mobileName {
-  position: relative;
-}
-
-.nameDesktop:hover::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.1rem;
-  border-bottom: 2px solid #3288c6;
-}
-
-.mobileName:hover::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.15rem;
-  border-bottom: 0.15rem solid #3288c6;
+.fa-arrow-down {
+  margin: 1rem 0;
 }
 
 /* ======================
@@ -956,7 +928,7 @@ MEDIA QUERIES
     padding: 0.3rem 1rem;
   }
 
-  .nameDesktop {
+  .desktopName {
     display: none;
   }
 
@@ -967,6 +939,16 @@ MEDIA QUERIES
     letter-spacing: 2px;
     letter-spacing: 0.1rem;
     font-weight: 200;
+    position: relative;
+  }
+
+  .mobileName:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15rem;
+    border-bottom: 0.15rem solid #3288c6;
   }
 
   .mobileNameKK {
@@ -1198,7 +1180,7 @@ MEDIA QUERIES
     width: 90%;
   }
 
-  .nameDesktop {
+  .desktopName {
     font-size: 20px;
     font-size: 1rem;
     line-height: 24px;

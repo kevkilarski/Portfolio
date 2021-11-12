@@ -1,79 +1,14 @@
 /* ======================
-HEADER
-=========================*/
-
-header {
-  height: calc(100vh - 2.8rem);
-  // background-image: url("./hero.jpeg") center;
-  // background-image: url("../assets/hero2.jpg");
-  // background-size: cover;
-  // background: $primaryBlue;
-  background-image: linear-gradient($primaryBlue, $secondaryBlue);
-  color: $primaryWhite;
-  // background-color: rgba(39, 65, 105, 0.6);
-  // background-blend-mode: multiply;
-}
-
-
-
-header .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-header button {
-  margin-top: 2rem;
-}
-
-header i {
-  padding: 1rem 0;
-}
-
-.headerTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-  margin-top: -2rem;
-}
-
-.headerButtons a {
-  margin-top: 1.8rem;
-  padding: 0.6rem 1.8rem;
-  background: $primaryWhite;
-  color: black;
-  font-weight: 400;
-}
-
-.headerButtons a:hover {
-  background-color: $primaryBlue;
-  color: $primaryWhite;
-}
-
-.nameDesktop {
-  cursor: default;
-}
-
-.mobileName {
-  cursor: default;
-}
-
-/* ======================
 NAVIGATION BAR
 =========================*/
 
 .topNavContainer {
   position: sticky;
   top: 0;
+  z-index: 10;
   height: 2.8rem;
   background-color: $primaryBlue;
   box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
-  z-index: 10;
 }
 
 .topNavContainer .wrapper {
@@ -84,17 +19,8 @@ NAVIGATION BAR
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: $primaryWhite;
   height: 100%;
-}
-
-.topNavBar p:first-child {
-  @include fontSize(22);
-}
-
-.headerButtons {
-  display: flex;
-  gap: 2rem;
+  color: $primaryWhite;
 }
 
 .topNavLinksContainer {
@@ -103,23 +29,15 @@ NAVIGATION BAR
   gap: 2.5rem;
 }
 
-.topNavIcons i:hover {
-  color: $secondaryBlue;
-}
-
 .mobileName {
   display: none;
 }
 
-.nameDesktop {
+.desktopName {
   position: relative;
 }
 
-.mobileName {
-  position: relative;
-}
-
-.nameDesktop:hover::before {
+.desktopName:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -128,13 +46,53 @@ NAVIGATION BAR
   border-bottom: 2px solid $secondaryBlue;
 }
 
-.mobileName:hover::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.15rem;
-  border-bottom: 0.15rem solid $secondaryBlue;
+
+/* ======================
+HEADER
+=========================*/
+
+header {
+  height: calc(100vh - 2.8rem);
+  background-image: linear-gradient($primaryBlue, $secondaryBlue);
+  color: $primaryWhite;
+}
+
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 2rem;
+}
+
+.headerButtons a {
+  margin-top: 1.8rem;
+  padding: 0.6rem 1.8rem;
+  background: $primaryWhite;
+  color: black;
+}
+
+.headerButtons a:hover {
+  background-color: $primaryBlue;
+  color: $primaryWhite;
+}
+
+.fa-arrow-down {
+  margin: 1rem 0;
 }
 
 
@@ -613,7 +571,7 @@ MEDIA QUERIES
 
   
 
-  .nameDesktop {
+  .desktopName {
     display: none;
   }
 
@@ -622,6 +580,16 @@ MEDIA QUERIES
     @include fontSize(22);
     @include letterSpacing(2);
     font-weight: 200;
+    position: relative;
+  }
+
+  .mobileName:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15rem;
+    border-bottom: 0.15rem solid $secondaryBlue;
   }
 
   .mobileNameKK {
@@ -888,7 +856,7 @@ MEDIA QUERIES
   }
 
 
-  .nameDesktop {
+  .desktopName {
     @include fontSize(20);
     @include lineHeight(24);
   }

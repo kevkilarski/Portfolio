@@ -29,6 +29,10 @@ p {
   @include lineHeight(32);
 }
 
+a {
+  font-weight: 400;
+}
+
 // @include lineHeight(29);
 // @include letterSpacing(1);
 
@@ -178,7 +182,9 @@ input[type=checkbox] {
   display: none;
 }
 
-
+.desktopName, .mobileName {
+  cursor: default;
+}
 
 
 
