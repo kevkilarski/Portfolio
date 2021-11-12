@@ -231,7 +231,6 @@ section {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 ul {
@@ -329,6 +328,7 @@ NAVIGATION BAR
   background-color: #274169;
   -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
           box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
+  color: #f3f7fa;
 }
 
 .topNavContainer .wrapper {
@@ -346,7 +346,6 @@ NAVIGATION BAR
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  color: #f3f7fa;
 }
 
 .topNavLinksContainer {
@@ -421,21 +420,21 @@ header .wrapper {
   text-align: center;
 }
 
-.headerButtons {
+.headerLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
 
-.headerButtons a {
+.headerLinks a {
   margin-top: 1.8rem;
   padding: 0.6rem 1.8rem;
   background: #f3f7fa;
   color: black;
 }
 
-.headerButtons a:hover {
+.headerLinks a:hover {
   background-color: #274169;
   color: #f3f7fa;
 }
@@ -476,10 +475,20 @@ ABOUT ME
 
 .aboutMeImage img {
   border-radius: 10rem;
-  border: 0.25rem solid #1e2f50;
+  border: 0.25rem solid #274169;
 }
 
 .aboutMeText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -511,12 +520,23 @@ ABOUT ME
 /* ======================
 SKILLS
 =========================*/
+.skills {
+  background-color: #3288c6;
+}
+
+.skills .sectionTitle {
+  color: #f3f7fa;
+}
+
+.skills .sectionStamp {
+  background: #274169;
+  color: #f3f7fa;
+}
+
 .skillsIcons p {
-  font-size: 20px;
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
   padding: 0.4rem 0;
+  text-align: center;
+  font-weight: 400;
 }
 
 .skillsIconsContainer {
@@ -546,28 +566,13 @@ SKILLS
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: calc(100% / 6 - 1.5rem);
-      flex-basis: calc(100% / 6 - 1.5rem);
-  color: #eeeff0;
+      -ms-flex: 1 1 calc(100% / 6 - 1.5rem);
+          flex: 1 1 calc(100% / 6 - 1.5rem);
+  color: #f3f7fa;
 }
 
 .skillsIcons:hover {
   color: #274169;
-}
-
-.skills {
-  background-color: #3288c6;
-}
-
-.skills .sectionTitle {
-  color: #eeeff0;
-}
-
-.skills .sectionStamp {
-  background: #274169;
-  color: #f3f7fa;
 }
 
 /* ======================
@@ -575,6 +580,17 @@ PROJECTS
 =========================*/
 .projects {
   background: #f3f7fa;
+}
+
+.projectsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
 }
 
 .projectsGroups {
@@ -585,6 +601,40 @@ PROJECTS
       -ms-flex-align: center;
           align-items: center;
   gap: 3rem;
+}
+
+.projectsGroupsImgLeft {
+  text-align: right;
+}
+
+.projectsGroupsImgLeft .projectsIcons {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projectsGroupsImgLeft .projectsLinks {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.projectsImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.projectsText {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 55%;
+          flex: 1 1 55%;
 }
 
 .projectsIcons {
@@ -598,63 +648,6 @@ PROJECTS
 .projectsIcons p {
   padding: 0.5rem 0;
   font-weight: 500;
-}
-
-.projectsButtons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.projectsButtons button {
-  background: #274169;
-  padding: 0.4rem 0.9rem;
-  color: #f3f7fa;
-  margin-top: 1rem;
-}
-
-.projectsText {
-  -ms-flex-preferred-size: 55%;
-      flex-basis: 55%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-}
-
-.projectsImages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.projectsGroupsImgLeft {
-  text-align: right;
-}
-
-.projectsGroupsImgLeft {
-  margin: 5rem 0;
-}
-
-.projectsGroupsImgLeft .projectsIcons {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.projectsGroupsImgLeft .projectsLinks {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .projectsLinks {
@@ -680,9 +673,9 @@ PROJECTS
 CONTACT
 =========================*/
 .contact {
+  padding: 5.5rem 0 4rem 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3288c6), to(#274169));
   background-image: linear-gradient(#3288c6, #274169);
-  padding: 5.5rem 0 4rem 0;
   color: #f3f7fa;
 }
 
@@ -711,6 +704,17 @@ CONTACT
       flex-basis: calc(100% / 2);
 }
 
+.contactLinksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+}
+
 .contactLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -729,18 +733,12 @@ CONTACT
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contactLinks {
-  margin: 0;
-}
-
-.contactLinks a {
+  gap: 0.5rem;
   color: #f3f7fa;
 }
 
-.contactLinks i {
-  margin-right: 0.8rem;
+.contactLinks a:hover {
+  color: #3288c6;
 }
 
 .contactForm {
@@ -751,18 +749,11 @@ CONTACT
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1rem;
 }
 
-.contact label {
-  margin-bottom: 0.5rem;
-}
-
-.contactFormGroups {
-  padding: 0.2rem 0;
-  margin: 0.5rem 0 1rem 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+.contactFormInputs {
+  border: none;
   border-bottom: 2px solid #f3f7fa;
   background: transparent;
   color: #f3f7fa;
@@ -781,23 +772,17 @@ CONTACT
   background-color: #3288c6;
 }
 
-.contactLinks a:hover {
-  color: #3288c6;
-}
-
 /* ======================
 FOOTER
 =========================*/
 footer {
-  background: #274169;
   padding: 1rem 0;
+  background: #274169;
 }
 
 footer p {
-  text-align: center;
   color: #f3f7fa;
-  line-height: 28px;
-  line-height: 1.4rem;
+  text-align: center;
 }
 
 /* ======================
@@ -811,7 +796,7 @@ MEDIA QUERIES
     line-height: 4.75rem;
   }
 
-  .headerButtons a {
+  .headerLinks a {
     padding: 0.4rem 1.4rem;
   }
 
@@ -820,9 +805,10 @@ MEDIA QUERIES
         flex-basis: calc(100% / 4 - 1.5rem);
   }
 
-  h3 {
-    font-size: 40px;
-    font-size: 2rem;
+  .projectsGroupsImgRight .projectsText {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 
   .projectsGroups {
@@ -830,61 +816,28 @@ MEDIA QUERIES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .projects {
-    background: #f3f7fa;
-  }
-
-  .projectsGroupsImgLeft {
-    margin: 8rem 0;
-  }
-
-  .projectsGroupsImgRight .projectsText {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-
-  .projectsText {
-    text-align: center;
-  }
-
-  .projectsIcons {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .projectsLinks {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .projectsGroupsImgLeft .projectsIcons {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .projectsGroupsImgLeft .projectsLinks {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    gap: 0rem;
   }
 
   .projectsImages {
     width: 70%;
   }
 
-  .projectsLinks a {
-    padding: 0.3rem 0.8rem;
-    background: #274169;
-    color: #f3f7fa;
-    font-weight: 400;
-    display: block;
+  .projectsText {
+    text-align: center;
+  }
+
+  .projectsText h3 {
+    font-size: 40px;
+    font-size: 2rem;
+  }
+
+  .projectsGroupsImgLeft .projectsIcons,
+.projectsGroupsImgLeft .projectsLinks,
+.projectsIcons, .projectsLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .contact .wrapper {
@@ -892,42 +845,24 @@ MEDIA QUERIES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 4rem;
   }
 
   .contactText {
     gap: 2rem;
   }
 
-  .contact .wrapper {
-    gap: 4rem;
-  }
-
   .contactForm {
-    border: 3px solid #f3f7fa;
     padding: 1rem;
+    border: 3px solid #f3f7fa;
     border-radius: 0.4rem;
   }
 
   .contactButton {
     margin: 0 auto;
   }
-
-  .sectionTitle {
-    padding-bottom: 2.4rem;
-  }
 }
 @media (max-width: 768px) {
-  h1 {
-    font-size: 58px;
-    font-size: 2.9rem;
-    line-height: 75px;
-    line-height: 3.75rem;
-  }
-
-  .headerButtons a {
-    padding: 0.3rem 1rem;
-  }
-
   .desktopName {
     display: none;
   }
@@ -953,6 +888,17 @@ MEDIA QUERIES
 
   .mobileNameKK {
     font-weight: 600;
+  }
+
+  h1 {
+    font-size: 58px;
+    font-size: 2.9rem;
+    line-height: 75px;
+    line-height: 3.75rem;
+  }
+
+  .headerLinks a {
+    padding: 0.3rem 1rem;
   }
 
   .aboutMeContent {
