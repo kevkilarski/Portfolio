@@ -19,10 +19,10 @@ app.init = () => {
 
 app.hamburgerMenu = () => {
   app.threeBars.addEventListener('click', () => {
-    app.topBar.classList.toggle('topTransform');
-    app.middleBar.classList.toggle('middleTransform');
-    app.bottomBar.classList.toggle('bottomTransform');
-    app.nav.classList.toggle('navExpanded');
+    app.topBar.classList.toggle('bar1Transform');
+    app.middleBar.classList.toggle('bar2Transform');
+    app.bottomBar.classList.toggle('bar3Transform');
+    app.nav.classList.toggle('navBarExpanded');
   })
 }
 

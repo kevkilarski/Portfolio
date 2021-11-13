@@ -375,6 +375,36 @@ NAVIGATION BAR
   border-bottom: 2px solid #3288c6;
 }
 
+.contactLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contactLinks a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  color: #f3f7fa;
+}
+
+.contactLinks a:hover {
+  color: #3288c6;
+}
+
+.contactLinks p {
+  display: none;
+}
+
 /* ======================
 HEADER
 =========================*/
@@ -704,7 +734,7 @@ CONTACT
       flex-basis: calc(100% / 2);
 }
 
-.contactLinksContainer {
+.contactGroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,32 +743,6 @@ CONTACT
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.8rem;
-}
-
-.contactLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 0.8rem;
-}
-
-.contactLinks a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  color: #f3f7fa;
-}
-
-.contactLinks a:hover {
-  color: #3288c6;
 }
 
 .contactForm {
@@ -890,70 +894,13 @@ MEDIA QUERIES
     font-weight: 600;
   }
 
-  h1 {
-    font-size: 58px;
-    font-size: 2.9rem;
-    line-height: 75px;
-    line-height: 3.75rem;
-  }
-
-  .headerLinks a {
-    padding: 0.3rem 1rem;
-  }
-
-  .aboutMeContent {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .aboutMeImage {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-    width: 50%;
-  }
-
-  .skillsIcons {
-    -ms-flex-preferred-size: calc(100% / 3 - 1.5rem);
-        flex-basis: calc(100% / 3 - 1.5rem);
-  }
-
-  .projectsImages {
-    width: 80%;
-  }
-
-  .fa-bars {
-    visibility: visible;
-    position: relative;
-    top: 0.1rem;
-    cursor: pointer;
-  }
-
-  .fa-bars:hover {
-    color: #3288c6;
-  }
-
   .topNavLinksContainer {
     position: fixed;
     left: 0;
     top: 2.8rem;
-    bottom: 0;
     right: 0;
-    z-index: 10;
-    overflow: hidden;
     height: 0;
-  }
-
-  .topNavLinksContainer li a p {
-    cursor: pointer;
-  }
-
-  .topNavLinksContainer li a {
-    padding-left: 1rem;
-  }
-
-  .topNavLinksContainer {
+    z-index: 10;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -962,22 +909,17 @@ MEDIA QUERIES
         -ms-flex-pack: center;
             justify-content: center;
     gap: 1.25rem;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 
-  .display {
-    display: inline;
+  .topNavLinksContainer .contactLinks {
+    padding-left: 1rem;
   }
 
-  .topNavLinksContainer i:hover {
-    color: #274169;
-  }
-
-  .contact {
-    padding: 4.5rem 0;
-  }
-
-  .contactMessage {
-    height: 8rem;
+  .contactLinks p {
+    display: inline-block;
   }
 
   .mobileHamContainer {
@@ -1016,36 +958,68 @@ MEDIA QUERIES
     transition: 0.5s;
   }
 
-  .topTransform {
+  .bar1Transform {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     top: 1.42rem;
   }
 
-  .middleTransform {
+  .bar2Transform {
     background-color: transparent;
   }
 
-  .bottomTransform {
+  .bar3Transform {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
     top: 1.38rem;
   }
 
-  .topNavLinksContainer {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-
-  .navExpanded {
+  .navBarExpanded {
     height: 10rem;
     position: fixed;
     left: 0;
     background: #274169;
   }
 
+  h1 {
+    font-size: 58px;
+    font-size: 2.9rem;
+    line-height: 75px;
+    line-height: 3.75rem;
+  }
+
+  .headerLinks a {
+    padding: 0.3rem 1rem;
+  }
+
   .fa-arrow-down {
     cursor: pointer;
+  }
+
+  .aboutMeContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutMeImage {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    width: 50%;
+  }
+
+  .skillsIcons {
+    -ms-flex-preferred-size: calc(100% / 3 - 1.5rem);
+        flex-basis: calc(100% / 3 - 1.5rem);
+  }
+
+  .projectsImages {
+    width: 80%;
+  }
+
+  .contactMessage {
+    height: 8rem;
   }
 }
 @media (max-width: 534px) {
@@ -1070,6 +1044,15 @@ MEDIA QUERIES
     padding: 0.2rem 0.7rem;
   }
 
+  .sectionTitle h2 {
+    font-size: 32px;
+    font-size: 1.6rem;
+  }
+
+  .sectionStamp {
+    padding: 0.15rem 0.4rem;
+  }
+
   .aboutMeContent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1087,27 +1070,19 @@ MEDIA QUERIES
   }
 
   .skillsIcons {
-    border-radius: 2rem;
     padding: 0.5rem;
-  }
-
-  .skillsIcons {
+    border-radius: 2rem;
     -ms-flex-preferred-size: calc(100% / 2 - 3.5rem);
         flex-basis: calc(100% / 2 - 3.5rem);
-  }
-
-  h2 {
-    font-size: 32px;
-    font-size: 1.6rem;
-  }
-
-  .sectionStamp {
-    padding: 0.15rem 0.4rem;
   }
 
   .projects i {
     font-size: 23px;
     font-size: 1.15rem;
+  }
+
+  .projectsImages {
+    width: 90%;
   }
 
   .projectsLinks {
@@ -1122,34 +1097,21 @@ MEDIA QUERIES
     margin-top: 1rem;
   }
 
-  .projectsImages {
-    width: 90%;
-  }
-
-  .desktopName {
-    font-size: 20px;
-    font-size: 1rem;
-    line-height: 24px;
-    line-height: 1.2rem;
-  }
-
   .footerBlockToggle {
     display: block;
   }
 }
 @media (max-width: 375px) {
+  .headerLinks {
+    gap: 1rem;
+  }
+
   .skillsIcons {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
 }
 @media (max-width: 393px) {
-  .skillsIcons {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
-@media (max-width: 348px) {
   h1 {
     font-size: 38px;
     font-size: 1.9rem;
@@ -1157,21 +1119,20 @@ MEDIA QUERIES
     line-height: 2.5rem;
   }
 
-  h1 .block {
-    font-size: 32px;
-    font-size: 1.6rem;
-  }
-
-  .headerButtons {
+  .headerLinks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+    gap: 0.1rem;
   }
 
   .blockToggle {
     display: block;
+  }
+
+  .skillsIcons {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
