@@ -6,7 +6,7 @@ NAVIGATION BAR
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 2.8rem;
+  height: 3rem;
   background-color: $primaryBlue;
   box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
   color: $primaryWhite;
@@ -23,21 +23,15 @@ NAVIGATION BAR
   height: 100%;
 }
 
-.topNavLinksContainer {
-  display: flex;
-  justify-content: space-between;
-  gap: 2.5rem;
-}
-
-.mobileName {
-  display: none;
-}
-
-.desktopName {
+.name {
   position: relative;
+  @include fontSize(22);
+  @include letterSpacing(2);
+  font-weight: 200;
+  cursor: default;
 }
 
-.desktopName:hover::before {
+.name:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -46,26 +40,34 @@ NAVIGATION BAR
   border-bottom: 2px solid $secondaryBlue;
 }
 
+.nameAbr {
+  font-weight: 600;
+}
+
+.topNavLinksContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
 .contactLinks {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.contactLinks a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: $primaryWhite;
+.contactLinks p {
+  cursor: pointer;
 }
 
-.contactLinks a:hover {
+.contactLinks p:hover {
   color: $secondaryBlue;
 }
 
-.contactLinks p {
+.mobileHamContainer {
   display: none;
 }
+
 
 /* ======================
 HEADER
@@ -214,6 +216,9 @@ SKILLS
   color: $primaryBlue;
 }
 
+.skills i {
+  @include fontSize(55);
+}
 
 /* ======================
 PROJECTS
@@ -268,6 +273,10 @@ PROJECTS
   font-weight: 500;
 }
 
+.projectsIcons i {
+  @include fontSize(28);
+}
+
 .projectsLinks {
   display: flex;
   gap: 1rem;
@@ -309,11 +318,17 @@ CONTACT
   flex-basis: calc(100% / 2);
 }
 
+// 
 .contactGroup {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
+
+.contact i {
+  @include fontSize(32);
+}
+// 
 
 .contactForm {
   display: flex;
@@ -441,105 +456,59 @@ MEDIA QUERIES
   
   // === NAVIGATION BAR ===
 
-  .desktopName {
-    display: none;
-  }
-
-  .mobileName {
-    display: inline;
-    @include fontSize(22);
-    @include letterSpacing(2);
-    font-weight: 200;
-    position: relative;
-  }
-
-  .mobileName:hover::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.15rem;
-    border-bottom: 0.15rem solid $secondaryBlue;
-  }
-
-  .mobileNameKK {
-    font-weight: 600;
-  }
-
   .topNavLinksContainer {
     position: fixed;
-    left: 0;
-    top: 2.8rem;
+
+    top: 3rem;
     right: 0;
-    height: 0;
     z-index: 10;
     flex-direction: column;
-    justify-content: center;
-    gap: 1.25rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 0;
+    gap: 0rem;
     overflow: hidden;
     transition: 0.5s;
   }
 
-  .topNavLinksContainer .contactLinks {
-    padding-left: 1rem;
+  .contactLinks {
+    padding: 0 3rem ;
   }
 
-  .contactLinks p {
-    display: inline-block;
+  .navBarExpanded {
+    height: 28%;
+    opacity: 95%;
+    background: $primaryBlue;
   }
 
   .mobileHamContainer {
-    cursor: pointer;
-    position: fixed;
-    right: 1.9rem;
-    top: 0.7rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 2rem;
-    height: 2rem;
+    height: 1.2rem;
+    cursor: pointer;
   }
 
   .mobileHamBars {
     height: 0.2rem;
-    width: 1.8rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
     background-color: white;
-    color: white;
-    position: fixed;
-    right: 2rem;
-    top: 1.3rem;
-  }
-
-  .mobileHamBar1 {
-    top: 0.8rem;
-    transition: 0.5s;
-  }
-
-  .mobileHamBar2  {
-    transition: 0.5s;
-  }
-
-  .mobileHamBar3 {
-    top: 1.8rem;
-    transition: 0.5s;
   }
 
   .bar1Transform {
-    transform: rotate(45deg);
-    top: 1.42rem;
+    transform: translateY(0.5rem) rotate(-45deg);
   }
 
   .bar2Transform {
-    background-color: transparent;
+    background: transparent;
+    transform: translateX(100%);
   }
 
   .bar3Transform {
-    transform: rotate(-45deg);
-    top: 1.38rem;
-  }
-
-  .navBarExpanded {
-    height: 10rem;
-    position: fixed;
-    left: 0;
-    background: $primaryBlue;
+    transform: translateY(-0.5rem) rotate(45deg);
   }
 
 

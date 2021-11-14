@@ -220,69 +220,6 @@ h1, h2, h3, p, a, ul, button, label {
   padding: 0;
 }
 
-button {
-  border: none;
-  color: black;
-}
-
-section {
-  padding: 3rem 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  padding-left: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-header i {
-  font-size: 30px;
-  font-size: 1.5rem;
-}
-
-.headerNavWrapper i {
-  font-size: 26px;
-  font-size: 1.3rem;
-  color: #f3f7fa;
-}
-
-.skills i {
-  font-size: 55px;
-  font-size: 2.75rem;
-}
-
-.projects i {
-  font-size: 28px;
-  font-size: 1.4rem;
-}
-
-.contact i {
-  font-size: 32px;
-  font-size: 1.6rem;
-}
-
-.block {
-  display: block;
-}
-
-button {
-  padding: 0.6rem 1.8rem;
-}
-
-textarea {
-  resize: none;
-}
-
 section {
   padding: 5.5rem 0;
 }
@@ -300,21 +237,34 @@ section {
   color: #f3f7fa;
 }
 
-.fa-bars {
-  visibility: hidden;
-  color: #f3f7fa;
+button {
+  border: none;
+  padding: 0.6rem 1.8rem;
+  color: black;
 }
 
-input[type=checkbox] {
-  display: none;
+a {
+  text-decoration: none;
 }
 
-.display {
-  display: none;
+ul {
+  padding-left: 0;
 }
 
-.desktopName, .mobileName {
-  cursor: default;
+li {
+  list-style-type: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.block {
+  display: block;
 }
 
 /* ======================
@@ -324,7 +274,7 @@ NAVIGATION BAR
   position: sticky;
   top: 0;
   z-index: 10;
-  height: 2.8rem;
+  height: 3rem;
   background-color: #274169;
   -webkit-box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
           box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
@@ -348,6 +298,29 @@ NAVIGATION BAR
   height: 100%;
 }
 
+.name {
+  position: relative;
+  font-size: 22px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  cursor: default;
+}
+
+.name:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  border-bottom: 2px solid #3288c6;
+}
+
+.nameAbr {
+  font-weight: 600;
+}
+
 .topNavLinksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,23 +329,6 @@ NAVIGATION BAR
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2.5rem;
-}
-
-.mobileName {
-  display: none;
-}
-
-.desktopName {
-  position: relative;
-}
-
-.desktopName:hover::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.1rem;
-  border-bottom: 2px solid #3288c6;
 }
 
 .contactLinks {
@@ -386,22 +342,15 @@ NAVIGATION BAR
   gap: 0.8rem;
 }
 
-.contactLinks a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  color: #f3f7fa;
+.contactLinks p {
+  cursor: pointer;
 }
 
-.contactLinks a:hover {
+.contactLinks p:hover {
   color: #3288c6;
 }
 
-.contactLinks p {
+.mobileHamContainer {
   display: none;
 }
 
@@ -605,6 +554,11 @@ SKILLS
   color: #274169;
 }
 
+.skills i {
+  font-size: 55px;
+  font-size: 2.75rem;
+}
+
 /* ======================
 PROJECTS
 =========================*/
@@ -680,6 +634,11 @@ PROJECTS
   font-weight: 500;
 }
 
+.projectsIcons i {
+  font-size: 28px;
+  font-size: 1.4rem;
+}
+
 .projectsLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -743,6 +702,11 @@ CONTACT
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.8rem;
+}
+
+.contact i {
+  font-size: 32px;
+  font-size: 1.6rem;
 }
 
 .contactForm {
@@ -867,118 +831,77 @@ MEDIA QUERIES
   }
 }
 @media (max-width: 768px) {
-  .desktopName {
-    display: none;
-  }
-
-  .mobileName {
-    display: inline;
-    font-size: 22px;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    letter-spacing: 0.1rem;
-    font-weight: 200;
-    position: relative;
-  }
-
-  .mobileName:hover::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.15rem;
-    border-bottom: 0.15rem solid #3288c6;
-  }
-
-  .mobileNameKK {
-    font-weight: 600;
-  }
-
   .topNavLinksContainer {
     position: fixed;
-    left: 0;
-    top: 2.8rem;
+    top: 3rem;
     right: 0;
-    height: 0;
     z-index: 10;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 1.25rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 0;
+    gap: 0rem;
     overflow: hidden;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
 
-  .topNavLinksContainer .contactLinks {
-    padding-left: 1rem;
+  .contactLinks {
+    padding: 0 3rem;
   }
 
-  .contactLinks p {
-    display: inline-block;
+  .navBarExpanded {
+    height: 28%;
+    opacity: 95%;
+    background: #274169;
   }
 
   .mobileHamContainer {
-    cursor: pointer;
-    position: fixed;
-    right: 1.9rem;
-    top: 0.7rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 2rem;
-    height: 2rem;
+    height: 1.2rem;
+    cursor: pointer;
   }
 
   .mobileHamBars {
     height: 0.2rem;
-    width: 1.8rem;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     background-color: white;
-    color: white;
-    position: fixed;
-    right: 2rem;
-    top: 1.3rem;
-  }
-
-  .mobileHamBar1 {
-    top: 0.8rem;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-
-  .mobileHamBar2 {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-
-  .mobileHamBar3 {
-    top: 1.8rem;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .bar1Transform {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 1.42rem;
+    -webkit-transform: translateY(0.5rem) rotate(-45deg);
+            transform: translateY(0.5rem) rotate(-45deg);
   }
 
   .bar2Transform {
-    background-color: transparent;
+    background: transparent;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 
   .bar3Transform {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 1.38rem;
-  }
-
-  .navBarExpanded {
-    height: 10rem;
-    position: fixed;
-    left: 0;
-    background: #274169;
+    -webkit-transform: translateY(-0.5rem) rotate(45deg);
+            transform: translateY(-0.5rem) rotate(45deg);
   }
 
   h1 {
