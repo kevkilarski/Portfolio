@@ -54,6 +54,7 @@ NAVIGATION BAR
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  font-weight: 400;
 }
 
 .contactLinks p {
@@ -94,23 +95,6 @@ header .wrapper {
   align-items: center;
   height: 100%;
   text-align: center;
-}
-
-.headerLinks {
-  display: flex;
-  gap: 2rem;
-}
-
-.headerLinks a {
-  margin-top: 1.8rem;
-  padding: 0.6rem 1.8rem;
-  background: $primaryWhite;
-  color: black;
-}
-
-.headerLinks a:hover {
-  background-color: $primaryBlue;
-  color: $primaryWhite;
 }
 
 .fa-arrow-down {
@@ -519,10 +503,6 @@ MEDIA QUERIES
     @include lineHeight(75);
   }
 
-  .headerLinks a {
-    padding: 0.3rem 1rem;
-  }
-
   .fa-arrow-down {
     cursor: pointer;
   }
@@ -645,13 +625,6 @@ MEDIA QUERIES
 @media (max-width: 375px) {
   
 
-  // === HEADER ===
-
-  .headerLinks {
-    gap: 1rem;
-  }
-
-
   // === SKILLS ===
 
   .skillsIcons {
@@ -669,11 +642,6 @@ MEDIA QUERIES
   h1 {
     @include fontSize(38);
     @include lineHeight(50);
-  }
-
-  .headerLinks {
-    flex-direction: column;
-    gap: 0.1rem;
   }
 
   .blockToggle {

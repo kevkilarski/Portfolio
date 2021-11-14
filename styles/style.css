@@ -340,6 +340,7 @@ NAVIGATION BAR
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.8rem;
+  font-weight: 400;
 }
 
 .contactLinks p {
@@ -397,25 +398,6 @@ header .wrapper {
           align-items: center;
   height: 100%;
   text-align: center;
-}
-
-.headerLinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2rem;
-}
-
-.headerLinks a {
-  margin-top: 1.8rem;
-  padding: 0.6rem 1.8rem;
-  background: #f3f7fa;
-  color: black;
-}
-
-.headerLinks a:hover {
-  background-color: #274169;
-  color: #f3f7fa;
 }
 
 .fa-arrow-down {
@@ -911,10 +893,6 @@ MEDIA QUERIES
     line-height: 3.75rem;
   }
 
-  .headerLinks a {
-    padding: 0.3rem 1rem;
-  }
-
   .fa-arrow-down {
     cursor: pointer;
   }
@@ -1025,10 +1003,6 @@ MEDIA QUERIES
   }
 }
 @media (max-width: 375px) {
-  .headerLinks {
-    gap: 1rem;
-  }
-
   .skillsIcons {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1040,14 +1014,6 @@ MEDIA QUERIES
     font-size: 1.9rem;
     line-height: 50px;
     line-height: 2.5rem;
-  }
-
-  .headerLinks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 0.1rem;
   }
 
   .blockToggle {
