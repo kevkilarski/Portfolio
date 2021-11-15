@@ -418,6 +418,79 @@ header .wrapper {
   color: #f3f7fa;
 }
 
+.headerTitle h1 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.titleWeb2 {
+  position: relative;
+}
+
+.titleWeb2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f3f7fa;
+  -webkit-animation: cursor 2s ease;
+          animation: cursor 2s ease;
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.titleWeb3 {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.titleWebFade {
+  -webkit-animation: fade 5s ease;
+          animation: fade 5s ease;
+}
+
+@-webkit-keyframes fade {
+  75% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes fade {
+  75% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
 .fa-arrow-down {
   margin: 1rem 0;
   -webkit-animation: arrowMove 2.5s infinite;

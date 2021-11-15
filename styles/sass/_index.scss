@@ -2,6 +2,36 @@
 NAVIGATION BAR
 =========================*/
 
+// header::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 10rem;
+//   width: 0.31rem;
+//   height: 5rem;
+//   background-color: white;
+//   z-index: 50;
+//   transform: rotate(-45deg);
+//   animation: stars 2.5s infinite;
+
+// }
+
+// @keyframes stars {
+//   0% {
+//     top: -30%;
+//     // left: 0;
+//     // transform: rotate(-45deg);
+//     // transform: translateY(0vh) translateX(0vh);
+//   }
+//   100% {
+//     top: 80%;
+//     left: 80%;
+//     // right: 0;
+//     // transform: rotate(-45deg);
+//     // transform: translateY(100vh) translateX(100vh);
+//     opacity: 0;
+//   }
+// }
 
 
 .topNavContainer {
@@ -119,6 +149,80 @@ header .wrapper {
   background-color: $primaryBlue;
   color: $primaryWhite;
 }
+
+.headerTitle h1 {
+  justify-content: flex-start;
+
+}
+
+.titleWeb2 {
+  position: relative;
+
+}
+
+.titleWeb2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  // transform: translateX(50%);
+  background-color: $primaryWhite;
+  animation: cursor 2s ease;
+}
+
+@keyframes cursor {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.titleWeb3 {
+  // background-image: linear-gradient(40deg, #E21143, #FFB03A);
+  background-clip: text;
+  color: transparent;
+}
+
+.titleWebFade {
+  animation: fade 5s ease;
+}
+
+@keyframes fade {
+  0% {
+    // filter: brightness(1)
+  }
+  75% {
+    color: white;
+    // filter: brightness(20);
+  }
+  100% {
+    color: white;
+    // filter: brightness(20);
+  }
+}
+
+// .titleWeb {
+//   position: relative;
+// }
+
+// .titleWeb::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: white;
+//   z-index: 99;
+// }
 
 // .headerTitle h1 {
 //   position: relative;
