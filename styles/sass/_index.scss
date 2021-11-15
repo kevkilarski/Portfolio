@@ -2,10 +2,12 @@
 NAVIGATION BAR
 =========================*/
 
+
+
 .topNavContainer {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   height: 3rem;
   background-color: $primaryBlue;
   box-shadow: 0 0.1rem 0.5rem rgba(39, 65, 105, 0.8);
@@ -25,7 +27,7 @@ NAVIGATION BAR
 
 .name {
   position: relative;
-  @include fontSize(22);
+  @include fontSize(24);
   @include letterSpacing(2);
   font-weight: 200;
   cursor: default;
@@ -57,12 +59,15 @@ NAVIGATION BAR
   font-weight: 400;
 }
 
-.contactLinks p {
+.contactLinks button {
+  color: $primaryWhite;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.contactLinks p:hover {
+.contactLinks button:hover {
   color: $secondaryBlue;
+  transition: 0.2s;
 }
 
 .mobileHamContainer {
@@ -75,7 +80,7 @@ HEADER
 =========================*/
 
 header {
-  height: calc(100vh - 2.8rem);
+  height: calc(100vh - 3rem);
   background-image: linear-gradient($primaryBlue, $secondaryBlue);
   color: $primaryWhite;
 }
@@ -89,16 +94,115 @@ header .wrapper {
 }
 
 .headerTitle {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   text-align: center;
+  height: 100%;
 }
+
+.headerTitle .titleBold {
+  font-weight: 700;
+  display: block;
+}
+
+.headerTitle button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  transition: 0.2s;
+  @include fontSize(25);
+}
+
+.headerTitle button:hover {
+  background-color: $primaryBlue;
+  color: $primaryWhite;
+}
+
+// .headerTitle h1 {
+//   position: relative;
+//   z-index: 10;
+// }
+
+// .headerTitle h1 {
+//   background-image: linear-gradient(
+//     #dde6ff,
+    
+    
+//     #ffffff,
+//     #e6ecff,
+
+
+//   );
+//   background-size: cover;
+//   background-clip: text;
+//   background-position: top;
+//   color: transparent;
+//   background-size: contain;
+//   // background-attachment: fixed;
+//   // background-position: 0 20%;
+//   // animation: moveGradient 2s normal infinite;
+// }
+
+// // .headerTitle h1 {
+//   // --border-width: 3px;
+
+//   // position: relative;
+//   // display: flex;
+//   // justify-content: center;
+//   // align-items: center;
+//   // width: 300px;
+//   // height: 200px;
+//   // font-family: Lato, sans-serif;
+//   // font-size: 2.5rem;
+//   // text-transform: uppercase;
+//   // color: white;
+//   // background: transparent;
+
+
+// //   &::after {
+// //     position: absolute;
+// //     content: "";
+// //     top: 0;
+// //     left: 0;
+// //     right: 0;
+// //     bottom: 0;
+// //     z-index: -1;
+// //     color: linear-gradient(
+// //       60deg,
+// //       hsl(224, 85%, 66%),
+// //       hsl(269, 85%, 66%),
+// //       hsl(314, 85%, 66%),
+// //       hsl(359, 85%, 66%),
+// //       hsl(44, 85%, 66%),
+// //       hsl(89, 85%, 66%),
+// //       hsl(134, 85%, 66%),
+// //       hsl(179, 85%, 66%)
+// //     );
+// //     background-size: 300% 300%;
+// //     background-position: 0 50%;
+// //     border-radius: 5px;
+// //     animation: moveGradient 4s alternate infinite;
+// //   }
+// // }
+
+// @keyframes moveGradient {
+//   50% {
+//     background-position: 100% 20%;
+//   }
+// }
 
 .fa-arrow-down {
   margin: 1rem 0;
+  animation: arrowMove 2.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes arrowMove {
+  50% {
+    transform: translateY(-1rem);
+  }
 }
 
 
@@ -174,11 +278,6 @@ SKILLS
   color: $primaryWhite;
 }
 
-.skillsIcons p {
-  padding: 0.4rem 0;
-  text-align: center;
-  font-weight: 400;
-}
 
 .skillsIconsContainer {
   display: flex;
@@ -200,7 +299,13 @@ SKILLS
   color: $primaryBlue;
 }
 
-.skills i {
+.skillsIcons p {
+  padding: 0.4rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.skillsIcons i {
   @include fontSize(55);
 }
 
@@ -362,18 +467,16 @@ MEDIA QUERIES
 
 @media (max-width: 1052px) {
 
-  
-  // === HEADER ===
+  // === ABOUT ME ===
 
-  h1 {
-    @include fontSize(80);
-    @include lineHeight(95);
+  .aboutMeContent {
+    flex-direction: column;
   }
 
-  .headerLinks a {
-    padding: 0.4rem 1.4rem;
+  .aboutMeImage {
+    flex-basis: 40%;
+    width: 45%;
   }
-
 
   // === SKILLS ===
 
@@ -442,7 +545,6 @@ MEDIA QUERIES
 
   .topNavLinksContainer {
     position: fixed;
-
     top: 3rem;
     right: 0;
     z-index: 10;
@@ -450,17 +552,26 @@ MEDIA QUERIES
     justify-content: space-evenly;
     align-items: center;
     height: 0;
-    gap: 0rem;
+    gap: 0;
     overflow: hidden;
     transition: 0.5s;
   }
 
   .contactLinks {
-    padding: 0 3rem ;
+    width: 100%;
+    text-align: center;
+    // border: 2px solid $secondaryBlue;
+  }
+
+  .contactLinks button {
+    // background-color: $primaryWhite;
+    padding: 1rem 4.5rem;
+    // border: 2px solid white;
   }
 
   .navBarExpanded {
-    height: 28%;
+    height: 32%;
+    // width: 12rem;
     opacity: 95%;
     background: $primaryBlue;
   }
@@ -503,20 +614,8 @@ MEDIA QUERIES
     @include lineHeight(75);
   }
 
-  .fa-arrow-down {
-    cursor: pointer;
-  }
-
-
-  // === ABOUT ME ===
-
-  .aboutMeContent {
-    flex-direction: column;
-  }
-
-  .aboutMeImage {
-    flex-basis: 40%;
-    width: 50%;
+  .headerTitle button {
+    padding: 0.3rem 1rem;
   }
 
 
@@ -548,21 +647,13 @@ MEDIA QUERIES
   // === HEADER ===
 
   h1 {
-    @include fontSize(38);
-    @include lineHeight(55);
+    @include fontSize(50);
+    @include lineHeight(65);
   }
 
-  .headerButtons {
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 1.5rem;
+  .headerTitle button {
+    @include fontSize(20);
   }
-
-  .headerButtons a {
-    margin: 0;
-    padding: 0.2rem 0.7rem;
-  }
-
 
   // === ABOUT ME ===
 
@@ -621,8 +712,18 @@ MEDIA QUERIES
   }
 }
 
+@media (max-width: 430px) {
 
-@media (max-width: 375px) {
+
+  // === HEADER ===
+
+  h1 {
+    @include fontSize(40);
+    @include lineHeight(55);
+  }
+}
+
+@media (max-width: 393px) {
   
 
   // === SKILLS ===
@@ -632,22 +733,8 @@ MEDIA QUERIES
   }
 }
 
-
-
-@media (max-width: 393px) {
+@media (max-width: 375px) {
   
-
-  // === HEADER ===
-
-  h1 {
-    @include fontSize(38);
-    @include lineHeight(50);
-  }
-
-  .blockToggle {
-    display: block;
-  }
-
 
   // === SKILLS ===
 

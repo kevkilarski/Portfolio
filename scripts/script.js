@@ -19,27 +19,43 @@ app.init = () => {
   app.scroll();
 };
 
+// Where to put helper functions?
+app.navBarToggle = () => {
+  app.topBar.classList.toggle('bar1Transform');
+  app.middleBar.classList.toggle('bar2Transform');
+  app.bottomBar.classList.toggle('bar3Transform');
+  app.topNav.classList.toggle('navBarExpanded');
+}
+
 app.hamburgerMenu = () => {
   app.threeBars.addEventListener('click', () => {
-    app.topBar.classList.toggle('bar1Transform');
-    app.middleBar.classList.toggle('bar2Transform');
-    app.bottomBar.classList.toggle('bar3Transform');
-    app.topNav.classList.toggle('navBarExpanded');
+    app.navBarToggle();
   })
 }
 
 app.scroll = function() {
+  document.querySelector(`#arrow`).addEventListener('click', () => {
+    app.aboutMe.scrollIntoView({behavior: "smooth"});
+  })
   document.querySelector(`#navAboutMe`).addEventListener('click', () => {
     app.aboutMe.scrollIntoView({behavior: "smooth"});
+    app.navBarToggle();
   })
   document.querySelector(`#navSkills`).addEventListener('click', () => {
     app.skills.scrollIntoView({behavior: "smooth"});
+    app.navBarToggle();
   })
   document.querySelector(`#navProjects`).addEventListener('click', () => {
     app.projects.scrollIntoView({behavior: "smooth"});
+    app.navBarToggle();
   })
   document.querySelector(`#navContact`).addEventListener('click', () => {
     app.contact.scrollIntoView({behavior: "smooth"});
+    app.navBarToggle();
+  })
+  document.querySelector(`#hireContact`).addEventListener('click', () => {
+    app.contact.scrollIntoView({behavior: "smooth"});
+    app.navBarToggle();
   })
 }
 

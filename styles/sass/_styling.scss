@@ -11,8 +11,8 @@ html {
 }
 
 h1 {
-  @include fontSize(100);
-  @include lineHeight(120);
+  @include fontSize(80);
+  @include lineHeight(105);
   font-weight: 300;
 }
 
@@ -50,12 +50,12 @@ h1, h2, h3, p, a, ul, button, label {
 }
 
 section {
-  padding: 5.5rem 0;
+  padding: 4rem 0;
 }
 
 .sectionTitle {
   text-align: center;
-  padding-bottom: 3.5rem;
+  padding-bottom: 3.2rem;
 }
 
 .sectionStamp {
@@ -68,8 +68,8 @@ section {
 
 button {
   border: none;
-  padding: 0.6rem 1.8rem;
-  color: black;
+  // padding: 0.6rem 1.8rem;
+  // color: black;
 }
 
 a {
@@ -90,8 +90,4 @@ textarea {
 
 img {
   max-width: 100%;
-}
-
-.block {
-  display: block;
 }
