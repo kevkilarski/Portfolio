@@ -302,8 +302,7 @@ NAVIGATION BAR
   cursor: default;
 }
 
-.name:hover::before,
-.name:focus::before {
+.name:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -339,16 +338,15 @@ NAVIGATION BAR
 }
 
 .contactLinks button {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   color: #f3f7fa;
   background-color: transparent;
   cursor: pointer;
 }
 
-.contactLinks button:hover,
-.contactLinks button:focus {
+.contactLinks button:hover {
   color: #3288c6;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
 .mobileHamContainer {
@@ -415,8 +413,7 @@ header .wrapper {
   font-size: 1.25rem;
 }
 
-.headerTitle button:hover,
-.headerTitle button:focus {
+.headerTitle button:hover {
   background-color: #274169;
   color: #f3f7fa;
 }
@@ -750,8 +747,7 @@ PROJECTS
   transition: 0.2s;
 }
 
-.projectsLinks a:hover,
-.projectsLinks a:focus {
+.projectsLinks a:hover {
   background: #3288c6;
 }
 
@@ -864,8 +860,7 @@ CONTACT
   transition: 0.2s;
 }
 
-.contactButton:hover,
-.contactButton:focus {
+.contactButton:hover {
   background-color: #3288c6;
   color: #f3f7fa;
 }

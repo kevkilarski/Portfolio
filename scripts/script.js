@@ -12,7 +12,6 @@ app.skills = document.querySelector('#skills');
 app.projects = document.querySelector('#projects');
 app.contact = document.querySelector('#contact');
 app.titleWebDev = document.querySelector('#titleWebDev');
-app.skillsIcons = document.querySelectorAll('.skillsIcons');
 app.iconCalendly = document.querySelector('#iconCalendly');
 app.iconGithub = document.querySelector('#iconGithub');
 app.iconLinkedin = document.querySelector('#iconLinkedin');
@@ -52,6 +51,9 @@ app.hamburgerMenu = () => {
 app.navScroll = function() {
   document.querySelector(`#arrow`).addEventListener('click', () => {
     app.aboutMe.scrollIntoView({behavior: "smooth"});
+  })
+  document.querySelector(`#hireContact`).addEventListener('click', () => {
+    app.contact.scrollIntoView({behavior: "smooth"});
   })
   document.querySelector(`#navAboutMe`).addEventListener('click', () => {
     app.aboutMe.scrollIntoView({behavior: "smooth"});

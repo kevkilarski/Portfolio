@@ -31,8 +31,7 @@ NAVIGATION BAR
   cursor: default;
 }
 
-.name:hover::before,
-.name:focus::before {
+.name:hover::before {
   content: "";
   position: absolute;
   left: 0;
@@ -59,15 +58,14 @@ NAVIGATION BAR
 }
 
 .contactLinks button {
+  transition: 0.2s;
   color: $primaryWhite;
   background-color: transparent;
   cursor: pointer;
 }
 
-.contactLinks button:hover,
-.contactLinks button:focus {
+.contactLinks button:hover {
   color: $secondaryBlue;
-  transition: 0.2s;
 }
 
 .mobileHamContainer {
@@ -115,8 +113,7 @@ header .wrapper {
   @include fontSize(25);
 }
 
-.headerTitle button:hover,
-.headerTitle button:focus {
+.headerTitle button:hover {
   background-color: $primaryBlue;
   color: $primaryWhite;
 }
@@ -361,8 +358,7 @@ PROJECTS
   transition: 0.2s;
 }
 
-.projectsLinks a:hover,
-.projectsLinks a:focus {
+.projectsLinks a:hover {
   background: $secondaryBlue;
 }
 
@@ -453,8 +449,7 @@ CONTACT
   transition: 0.2s;
 }
 
-.contactButton:hover,
-.contactButton:focus {
+.contactButton:hover {
   background-color: $secondaryBlue;
   color: $primaryWhite;
 }
