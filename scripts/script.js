@@ -1,7 +1,7 @@
 // Creating namespace object
 const app = {};
 
-// Storing elements in namespace elements
+// Storing elements and functions in namespace elements
 app.threeBars = document.querySelector('#mobileHamContainer');
 app.topBar = document.querySelector('#mobileHamBar1');
 app.middleBar = document.querySelector('#mobileHamBar2');
@@ -27,6 +27,7 @@ app.navBarRevert = () => {
   app.topNav.classList.remove('navBarExpanded');
 }
 
+
 // Declaring init method
 app.init = () => {
   app.hamburgerMenu();
@@ -34,6 +35,7 @@ app.init = () => {
   app.titleColor();
   app.contactDesc();
 };
+
 
 // Open and close hamburger menu
 app.hamburgerMenu = () => {
@@ -44,6 +46,7 @@ app.hamburgerMenu = () => {
     app.topNav.classList.toggle('navBarExpanded');
   })
 }
+
 
 // Page scroll from top nav bar
 app.navScroll = function() {
@@ -67,6 +70,7 @@ app.navScroll = function() {
     app.navBarRevert();
   })
 }
+
 
 // Title animation
 app.titleColor = () => {
@@ -102,7 +106,8 @@ app.titleColor = () => {
   }, 1000);
 }
 
-// Rendering icon nave upon hover
+
+// Rendering icon fade upon hover
 app.contactDesc = () => {
   app.iconCalendly.addEventListener("mouseenter", () => {
       app.iconDetailsCalendly.classList.toggle('contactLinksFadeIn');
@@ -123,6 +128,7 @@ app.contactDesc = () => {
     app.iconDetailsLinkedin.classList.toggle('contactLinksFadeIn');
   })
 }
+
 
 // Call init method
 app.init();

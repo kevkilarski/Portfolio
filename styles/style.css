@@ -490,9 +490,9 @@ header .wrapper {
 }
 .fa-arrow-down {
   margin: 1rem 0;
+  cursor: pointer;
   -webkit-animation: arrowMove 2.5s infinite;
           animation: arrowMove 2.5s infinite;
-  cursor: pointer;
 }
 
 @-webkit-keyframes arrowMove {
@@ -637,6 +637,10 @@ SKILLS
   color: #f3f7fa;
 }
 
+.skillsIcons:hover {
+  color: #274169;
+}
+
 .skillsIcons p {
   padding: 0.4rem 0;
   text-align: center;
@@ -647,10 +651,6 @@ SKILLS
 .skillsIcons i {
   font-size: 55px;
   font-size: 2.75rem;
-}
-
-.skillsIcons:hover {
-  color: #274169;
 }
 
 /* ======================

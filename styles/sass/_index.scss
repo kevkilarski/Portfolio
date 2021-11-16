@@ -2,38 +2,6 @@
 NAVIGATION BAR
 =========================*/
 
-// header::before {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 10rem;
-//   width: 0.31rem;
-//   height: 5rem;
-//   background-color: white;
-//   z-index: 50;
-//   transform: rotate(-45deg);
-//   animation: stars 2.5s infinite;
-
-// }
-
-// @keyframes stars {
-//   0% {
-//     top: -30%;
-//     // left: 0;
-//     // transform: rotate(-45deg);
-//     // transform: translateY(0vh) translateX(0vh);
-//   }
-//   100% {
-//     top: 80%;
-//     left: 80%;
-//     // right: 0;
-//     // transform: rotate(-45deg);
-//     // transform: translateY(100vh) translateX(100vh);
-//     opacity: 0;
-//   }
-// }
-
-
 .topNavContainer {
   position: sticky;
   top: 0;
@@ -164,7 +132,6 @@ header .wrapper {
   right: 0;
   width: 0;
   height: 100%;
-  // transform: translateX(50%);
   background-color: $primaryWhite;
   animation: cursor 2s ease;
 }
@@ -199,99 +166,10 @@ header .wrapper {
   }
 }
 
-// .titleWeb {
-//   position: relative;
-// }
-
-// .titleWeb::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: white;
-//   z-index: 99;
-// }
-
-// .headerTitle h1 {
-//   position: relative;
-//   z-index: 10;
-// }
-
-// .headerTitle h1 {
-//   background-image: linear-gradient(
-//     #dde6ff,
-    
-    
-//     #ffffff,
-//     #e6ecff,
-
-
-//   );
-//   background-size: cover;
-//   background-clip: text;
-//   background-position: top;
-//   color: transparent;
-//   background-size: contain;
-//   // background-attachment: fixed;
-//   // background-position: 0 20%;
-//   // animation: moveGradient 2s normal infinite;
-// }
-
-// // .headerTitle h1 {
-//   // --border-width: 3px;
-
-//   // position: relative;
-//   // display: flex;
-//   // justify-content: center;
-//   // align-items: center;
-//   // width: 300px;
-//   // height: 200px;
-//   // font-family: Lato, sans-serif;
-//   // font-size: 2.5rem;
-//   // text-transform: uppercase;
-//   // color: white;
-//   // background: transparent;
-
-
-// //   &::after {
-// //     position: absolute;
-// //     content: "";
-// //     top: 0;
-// //     left: 0;
-// //     right: 0;
-// //     bottom: 0;
-// //     z-index: -1;
-// //     color: linear-gradient(
-// //       60deg,
-// //       hsl(224, 85%, 66%),
-// //       hsl(269, 85%, 66%),
-// //       hsl(314, 85%, 66%),
-// //       hsl(359, 85%, 66%),
-// //       hsl(44, 85%, 66%),
-// //       hsl(89, 85%, 66%),
-// //       hsl(134, 85%, 66%),
-// //       hsl(179, 85%, 66%)
-// //     );
-// //     background-size: 300% 300%;
-// //     background-position: 0 50%;
-// //     border-radius: 5px;
-// //     animation: moveGradient 4s alternate infinite;
-// //   }
-// // }
-
-// @keyframes moveGradient {
-//   50% {
-//     background-position: 100% 20%;
-//   }
-// }
-
 .fa-arrow-down {
   margin: 1rem 0;
-  animation: arrowMove 2.5s infinite;
   cursor: pointer;
+  animation: arrowMove 2.5s infinite;
 }
 
 @keyframes arrowMove {
@@ -396,10 +274,9 @@ SKILLS
   color: $primaryWhite;
 }
 
-// .skillsIcons:hover,
-// .skillsIcons:focus {
-//   color: $primaryBlue;
-// }
+.skillsIcons:hover {
+  color: $primaryBlue;
+}
 
 .skillsIcons p {
   padding: 0.4rem 0;
@@ -412,22 +289,6 @@ SKILLS
   @include fontSize(55);
 }
 
-// .skillsIconsGlow {
-//   transition: 0.5s;
-//   background-color: red;
-// }
-
-.skillsIcons:hover {
-
-  color: $primaryBlue;
-  // animation: grow 2s forwards;
-}
-
-// @keyframes grow {
-//   100% {
-//     border-bottom: 5px solid $primaryBlue;
-//   }
-// }
 
 /* ======================
 PROJECTS
@@ -536,7 +397,6 @@ CONTACT
   text-align: center;
 }
 
-// 
 .contactGroup {
   display: flex;
   justify-content: space-between;
@@ -548,13 +408,7 @@ CONTACT
 .contactLinks i {
   @include fontSize(43);
   color: $primaryWhite;
-  // transition: 0.2s;
 }
-
-// .contactLinks i:hover,
-// .contactLinks i:focus {
-//   color: $primaryBlue;
-// }
 
 .iconDetails {
   opacity: 0;
@@ -569,19 +423,6 @@ CONTACT
   opacity: 0%;
 }
 
-// 
-
-// .iconDetails {
-//   height: 1rem;
-//   text-align: center;
-// }
-
-// .contactLinks a {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
 .contactLinks {
   position: relative;
 }
@@ -595,16 +436,6 @@ CONTACT
   color: $primaryWhite;
   font-weight: 500;
 }
-
-// .contactLinks i::after {
-//   content: "";
-//   position: absolute;
-//   height: 2rem;
-//   background: white;
-//   bottom: -2rem;
-//   left: 0;
-//   right: 0;
-// }
 
 .contactForm {
   display: flex;
@@ -687,7 +518,6 @@ MEDIA QUERIES
     flex-basis: calc(100% / 4 - 1.5rem);
   }
 
-
   // === PROJECTS ===
   
   .projectsGroupsImgRight .projectsText {
@@ -717,7 +547,6 @@ MEDIA QUERIES
     justify-content: center;
   }
 
-
   // === CONTACT ===
 
   .contact .wrapper {
@@ -745,9 +574,7 @@ MEDIA QUERIES
   }
 }
 
-
 @media (max-width: 768px) {
-
   
   // === NAVIGATION BAR ===
 
@@ -768,18 +595,14 @@ MEDIA QUERIES
   .contactLinks {
     width: 100%;
     text-align: center;
-    // border: 2px solid $secondaryBlue;
   }
 
   .contactLinks button {
-    // background-color: $primaryWhite;
     padding: 1rem 4.5rem;
-    // border: 2px solid white;
   }
 
   .navBarExpanded {
     height: 32%;
-    // width: 12rem;
     opacity: 95%;
     background: $primaryBlue;
   }
@@ -814,7 +637,6 @@ MEDIA QUERIES
     transform: translateY(-0.5rem) rotate(45deg);
   }
 
-
   // === HEADER ===
 
   header {
@@ -830,20 +652,17 @@ MEDIA QUERIES
     padding: 0.3rem 1rem;
   }
 
-
   // === SKILLS ===
 
   .skillsIcons {
     flex-basis: calc(100% / 3 - 1.5rem);
   }
 
-
   // === PROJECTS ===
 
   .projectsImages {
     width: 80%;
   }
-
 
   // === CONTACT ===
 
@@ -864,9 +683,7 @@ MEDIA QUERIES
   }
 }
 
-
 @media (max-width: 534px) {
-
 
   // === HEADER ===
 
@@ -884,23 +701,14 @@ MEDIA QUERIES
   .sectionTitle h2 {
     @include fontSize(38);
   }
-  
-  // .sectionStamp {
-  //   padding: 0.15rem 0.4rem;
-  // }
 
   .aboutMeContent {
     flex-direction: column;
   }
 
-  // .aboutMeImage {
-  //   width: 65%;
-  // }
-
   .aboutMeName {
     @include fontSize(25);
   }
-
 
   // === SKILLS ===
 
@@ -912,12 +720,7 @@ MEDIA QUERIES
     @include fontSize(45);
   }
 
-
   // === PROJECTS ===
-
-  // .projects i {
-  //   @include fontSize(23);
-  // }
 
   .projectsImages {
     width: 90%;
@@ -942,7 +745,6 @@ MEDIA QUERIES
     display: block;
   }
 }
-
 
 @media (max-width: 430px) {
 
@@ -971,7 +773,6 @@ MEDIA QUERIES
     width: 100%;
   }
 }
-
 
 @media (max-width: 375px) {
   
