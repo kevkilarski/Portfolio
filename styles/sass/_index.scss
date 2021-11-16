@@ -150,17 +150,11 @@ header .wrapper {
   color: $primaryWhite;
 }
 
-.headerTitle h1 {
-  justify-content: flex-start;
-
-}
-
-.titleWeb2 {
+.titleWebDev {
   position: relative;
-
 }
 
-.titleWeb2::after {
+.titleBar::after {
   content: "";
   position: absolute;
   top: 0;
@@ -184,27 +178,21 @@ header .wrapper {
   }
 }
 
-.titleWeb3 {
-  // background-image: linear-gradient(40deg, #E21143, #FFB03A);
+.titleColorNew {
   background-clip: text;
   color: transparent;
 }
 
-.titleWebFade {
+.titleColorToWhite {
   animation: fade 5s ease;
 }
 
 @keyframes fade {
-  0% {
-    // filter: brightness(1)
-  }
   75% {
-    color: white;
-    // filter: brightness(20);
+    color: $primaryWhite;
   }
   100% {
-    color: white;
-    // filter: brightness(20);
+    color: $primaryWhite;
   }
 }
 
@@ -305,7 +293,7 @@ header .wrapper {
 
 @keyframes arrowMove {
   50% {
-    transform: translateY(-1rem);
+    transform: translateY(-0.5rem);
   }
 }
 
@@ -573,6 +561,10 @@ MEDIA QUERIES
 
   // === ABOUT ME ===
 
+  .sectionTitle {
+    padding-bottom: 2.3rem;
+  }
+
   .aboutMeContent {
     flex-direction: column;
   }
@@ -580,6 +572,7 @@ MEDIA QUERIES
   .aboutMeImage {
     flex-basis: 40%;
     width: 45%;
+    min-width: 12rem;
   }
 
   // === SKILLS ===
@@ -713,6 +706,10 @@ MEDIA QUERIES
 
   // === HEADER ===
 
+  header {
+    height: calc(80vh - 3rem);
+  }
+
   h1 {
     @include fontSize(58);
     @include lineHeight(75);
@@ -751,7 +748,7 @@ MEDIA QUERIES
   // === HEADER ===
 
   h1 {
-    @include fontSize(50);
+    @include fontSize(47);
     @include lineHeight(65);
   }
 
@@ -762,20 +759,20 @@ MEDIA QUERIES
   // === ABOUT ME ===
 
   .sectionTitle h2 {
-    @include fontSize(32);
+    @include fontSize(38);
   }
   
-  .sectionStamp {
-    padding: 0.15rem 0.4rem;
-  }
+  // .sectionStamp {
+  //   padding: 0.15rem 0.4rem;
+  // }
 
   .aboutMeContent {
     flex-direction: column;
   }
 
-  .aboutMeImage {
-    width: 65%;
-  }
+  // .aboutMeImage {
+  //   width: 65%;
+  // }
 
   .aboutMeName {
     @include fontSize(25);
@@ -785,17 +782,19 @@ MEDIA QUERIES
   // === SKILLS ===
 
   .skillsIcons {
-    padding: 0.5rem;
-    border-radius: 2rem;
-    flex-basis: calc(100% / 2 - 3.5rem);
+    flex-basis: calc(50% - 3.5rem);
+  }
+
+  .skillsIcons i {
+    @include fontSize(45);
   }
 
 
   // === PROJECTS ===
 
-  .projects i {
-    @include fontSize(23);
-  }
+  // .projects i {
+  //   @include fontSize(23);
+  // }
 
   .projectsImages {
     width: 90%;
@@ -816,8 +815,8 @@ MEDIA QUERIES
   }
 }
 
-@media (max-width: 430px) {
 
+@media (max-width: 430px) {
 
   // === HEADER ===
 
@@ -825,24 +824,28 @@ MEDIA QUERIES
     @include fontSize(40);
     @include lineHeight(55);
   }
-}
 
-@media (max-width: 393px) {
-  
+  // === ABOUT ME ===
 
-  // === SKILLS ===
-
-  .skillsIcons {
-    flex-basis: 100%;
+  .sectionTitle h2 {
+    @include fontSize(34);
   }
+
+  // === PROJECTS ===
+
+  .projects i {
+    @include fontSize(22);
+  }
+    
 }
+
 
 @media (max-width: 375px) {
   
+  // === HEADER ===
 
-  // === SKILLS ===
-
-  .skillsIcons {
-    flex-basis: 100%;
+  h1 {
+    @include fontSize(34);
+    @include lineHeight(55);
   }
 }

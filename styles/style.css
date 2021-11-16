@@ -418,17 +418,11 @@ header .wrapper {
   color: #f3f7fa;
 }
 
-.headerTitle h1 {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.titleWeb2 {
+.titleWebDev {
   position: relative;
 }
 
-.titleWeb2::after {
+.titleBar::after {
   content: "";
   position: absolute;
   top: 0;
@@ -463,32 +457,32 @@ header .wrapper {
     width: 0;
   }
 }
-.titleWeb3 {
+.titleColorNew {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
 
-.titleWebFade {
+.titleColorToWhite {
   -webkit-animation: fade 5s ease;
           animation: fade 5s ease;
 }
 
 @-webkit-keyframes fade {
   75% {
-    color: white;
+    color: #f3f7fa;
   }
   100% {
-    color: white;
+    color: #f3f7fa;
   }
 }
 
 @keyframes fade {
   75% {
-    color: white;
+    color: #f3f7fa;
   }
   100% {
-    color: white;
+    color: #f3f7fa;
   }
 }
 .fa-arrow-down {
@@ -500,15 +494,15 @@ header .wrapper {
 
 @-webkit-keyframes arrowMove {
   50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
   }
 }
 
 @keyframes arrowMove {
   50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
   }
 }
 /* ======================
@@ -846,6 +840,10 @@ footer p {
 MEDIA QUERIES
 =========================*/
 @media (max-width: 1052px) {
+  .sectionTitle {
+    padding-bottom: 2.3rem;
+  }
+
   .aboutMeContent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -857,6 +855,7 @@ MEDIA QUERIES
     -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     width: 45%;
+    min-width: 12rem;
   }
 
   .skillsIcons {
@@ -1000,6 +999,10 @@ MEDIA QUERIES
             transform: translateY(-0.5rem) rotate(45deg);
   }
 
+  header {
+    height: calc(80vh - 3rem);
+  }
+
   h1 {
     font-size: 58px;
     font-size: 2.9rem;
@@ -1026,8 +1029,8 @@ MEDIA QUERIES
 }
 @media (max-width: 534px) {
   h1 {
-    font-size: 50px;
-    font-size: 2.5rem;
+    font-size: 47px;
+    font-size: 2.35rem;
     line-height: 65px;
     line-height: 3.25rem;
   }
@@ -1038,12 +1041,8 @@ MEDIA QUERIES
   }
 
   .sectionTitle h2 {
-    font-size: 32px;
-    font-size: 1.6rem;
-  }
-
-  .sectionStamp {
-    padding: 0.15rem 0.4rem;
+    font-size: 38px;
+    font-size: 1.9rem;
   }
 
   .aboutMeContent {
@@ -1053,25 +1052,19 @@ MEDIA QUERIES
             flex-direction: column;
   }
 
-  .aboutMeImage {
-    width: 65%;
-  }
-
   .aboutMeName {
     font-size: 25px;
     font-size: 1.25rem;
   }
 
   .skillsIcons {
-    padding: 0.5rem;
-    border-radius: 2rem;
-    -ms-flex-preferred-size: calc(100% / 2 - 3.5rem);
-        flex-basis: calc(100% / 2 - 3.5rem);
+    -ms-flex-preferred-size: calc(50% - 3.5rem);
+        flex-basis: calc(50% - 3.5rem);
   }
 
-  .projects i {
-    font-size: 23px;
-    font-size: 1.15rem;
+  .skillsIcons i {
+    font-size: 45px;
+    font-size: 2.25rem;
   }
 
   .projectsImages {
@@ -1101,16 +1094,22 @@ MEDIA QUERIES
     line-height: 55px;
     line-height: 2.75rem;
   }
-}
-@media (max-width: 393px) {
-  .skillsIcons {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+
+  .sectionTitle h2 {
+    font-size: 34px;
+    font-size: 1.7rem;
+  }
+
+  .projects i {
+    font-size: 22px;
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 375px) {
-  .skillsIcons {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  h1 {
+    font-size: 34px;
+    font-size: 1.7rem;
+    line-height: 55px;
+    line-height: 2.75rem;
   }
 }
