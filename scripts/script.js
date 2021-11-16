@@ -12,6 +12,12 @@ app.skills = document.querySelector('#skills');
 app.projects = document.querySelector('#projects');
 app.contact = document.querySelector('#contact');
 app.titleWebDev = document.querySelector('#titleWebDev');
+app.iconCalendly = document.querySelector('#iconCalendly');
+app.iconGithub = document.querySelector('#iconGithub');
+app.iconLinkedin = document.querySelector('#iconLinkedin');
+app.iconDetailsCalendly = document.querySelector('#iconDetailsCalendly');
+app.iconDetailsGithub = document.querySelector('#iconDetailsGithub');
+app.iconDetailsLinkedin = document.querySelector('#iconDetailsLinkedin');
 
 app.navBarToggle = () => {
   app.topBar.classList.toggle('bar1Transform');
@@ -25,6 +31,7 @@ app.init = () => {
   app.hamburgerMenu();
   app.navScroll();
   app.titleColor();
+  app.contactDesc();
 };
 
 app.hamburgerMenu = () => {
@@ -93,7 +100,27 @@ app.titleColor = () => {
   }, 1000);
 }
 
+app.contactDesc = () => {
+  app.iconCalendly.addEventListener("mouseenter", () => {
+    app.iconDetailsCalendly.style.display = "inline";
+  })
+  app.iconGithub.addEventListener("mouseenter", () => {
+    app.iconDetailsGithub.style.display = "inline";
+  })
+  app.iconLinkedin.addEventListener("mouseenter", () => {
+    app.iconDetailsLinkedin.style.display = "inline";
+  })
 
+  app.iconCalendly.addEventListener("mouseout", () => {
+    app.iconDetailsCalendly.style.display = "none";
+  })
+  app.iconGithub.addEventListener("mouseout", () => {
+    app.iconDetailsGithub.style.display = "none";
+  })
+  app.iconLinkedin.addEventListener("mouseout", () => {
+    app.iconDetailsLinkedin.style.display = "none";
+  })
+}
 
 // Call init method
 app.init();

@@ -63,7 +63,8 @@ NAVIGATION BAR
   cursor: default;
 }
 
-.name:hover::before {
+.name:hover::before,
+.name:focus::before {
   content: "";
   position: absolute;
   left: 0;
@@ -95,7 +96,8 @@ NAVIGATION BAR
   cursor: pointer;
 }
 
-.contactLinks button:hover {
+.contactLinks button:hover,
+.contactLinks button:focus {
   color: $secondaryBlue;
   transition: 0.2s;
 }
@@ -145,7 +147,8 @@ header .wrapper {
   @include fontSize(25);
 }
 
-.headerTitle button:hover {
+.headerTitle button:hover,
+.headerTitle button:focus {
   background-color: $primaryBlue;
   color: $primaryWhite;
 }
@@ -308,6 +311,10 @@ ABOUT ME
   background: $primaryWhite;
 }
 
+.aboutMe .sectionTitle {
+  padding-bottom: 2.7rem;
+}
+
 .aboutMeContent {
   display: flex;
   align-items: center;
@@ -337,6 +344,7 @@ ABOUT ME
 .aboutMeBlockToggle {
   position: relative;
   display: inline-block;
+  font-weight: 700;
 }
 
 .aboutMeBlockToggle::before {
@@ -387,14 +395,16 @@ SKILLS
   color: $primaryWhite;
 }
 
-.skillsIcons:hover {
-  color: $primaryBlue;
-}
+// .skillsIcons:hover,
+// .skillsIcons:focus {
+//   color: $primaryBlue;
+// }
 
 .skillsIcons p {
   padding: 0.4rem 0;
   text-align: center;
   font-weight: 400;
+  cursor: default;
 }
 
 .skillsIcons i {
@@ -471,7 +481,8 @@ PROJECTS
   font-weight: 400;
 }
 
-.projectsLinks a:hover {
+.projectsLinks a:hover,
+.projectsLinks a:focus {
   background: $secondaryBlue;
 }
 
@@ -481,7 +492,7 @@ CONTACT
 =========================*/
 
 .contact {
-  padding: 5.5rem 0 4rem 0;
+  padding: 4rem 0;
   background-image: linear-gradient($secondaryBlue, $primaryBlue);
   color: $primaryWhite;
 }
@@ -489,32 +500,90 @@ CONTACT
 .contact .wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 3.5rem;
+  width: 65%;
 }
 
 .contactText {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: calc(100% / 2);
+  gap: 2rem;
+  flex-basis: 50%;
+}
+
+.contactText h2 {
+  text-align: center;
 }
 
 // 
 .contactGroup {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 0.8rem;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.contact i {
-  @include fontSize(32);
+.contactLinks i {
+  @include fontSize(43);
+  color: $primaryWhite;
+}
+
+.contactLinks i:hover,
+.contactLinks i:focus {
+  color: $primaryBlue;
 }
 // 
+
+// .iconDetails {
+//   height: 1rem;
+//   text-align: center;
+// }
+
+// .contactLinks a {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.contactLinks {
+  position: relative;
+}
+
+.contactLinks p {
+  position: absolute;
+  bottom: -2rem;
+  left: -10rem;
+  right: -10rem;
+  text-align: center;
+  color: $primaryWhite;
+  font-weight: 500;
+}
+
+// .contactLinks i::after {
+//   content: "";
+//   position: absolute;
+//   height: 2rem;
+//   background: white;
+//   bottom: -2rem;
+//   left: 0;
+//   right: 0;
+// }
+
+.iconDetails {
+  display: none;
+}
 
 .contactForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex-basis: 45%;
+  border: 3px solid $primaryWhite;
+  border-radius: 0.4rem;
+  padding: 2rem;
 }
 
 .contactFormInputs {
@@ -530,11 +599,16 @@ CONTACT
 
 .contactButton {
   width: 8rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0 auto;
   background: $primaryWhite;
+  transition: 0.2s;
 }
 
-.contactButton:hover {
+.contactButton:hover,
+.contactButton:focus {
   background-color: $secondaryBlue;
+  color: $primaryWhite;
 }
 
 
@@ -615,18 +689,23 @@ MEDIA QUERIES
   // === CONTACT ===
 
   .contact .wrapper {
-    flex-direction: column;
-    gap: 4rem;
+    width: 80%;
   }
 
   .contactText {
     gap: 2rem;
   }
 
-  .contactForm {
-    padding: 1rem;
-    border: 3px solid $primaryWhite;
-    border-radius: 0.4rem;
+  .contactText h2 {
+    text-align: center;
+  }
+  
+  .contactGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    width: 50%;
+    margin: 0 auto;
   }
   
   .contactButton {
@@ -736,6 +815,14 @@ MEDIA QUERIES
 
   // === CONTACT ===
 
+  .contact .wrapper {
+    width: 90%;
+  }
+
+  .contactGroup {
+    width: 80%;
+  }
+
   .contactMessage {
     height: 8rem;
   }
@@ -807,6 +894,11 @@ MEDIA QUERIES
     margin-top: 1rem;
   }
 
+  // === CONTACT ===
+
+  .contactForm {
+    padding: 1.2rem;
+  }
 
   // === FOOTER ===
 
@@ -836,7 +928,12 @@ MEDIA QUERIES
   .projects i {
     @include fontSize(22);
   }
-    
+  
+  // === CONTACT ===
+
+  .contactGroup {
+    width: 100%;
+  }
 }
 
 
