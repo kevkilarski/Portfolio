@@ -372,7 +372,7 @@ CONTACT
 =========================*/
 
 .contact {
-  padding: 4rem 0;
+  padding: 4rem 0 1rem;
   background-image: linear-gradient($secondaryBlue, $primaryBlue);
   color: $primaryWhite;
 }
@@ -380,21 +380,14 @@ CONTACT
 .contact .wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   gap: 3.5rem;
-  max-width: 50rem;
 }
 
 .contactText {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 2.7rem;
   flex-basis: 50%;
-}
-
-.contactText h2 {
-  text-align: center;
 }
 
 .contactGroup {
@@ -402,7 +395,6 @@ CONTACT
   justify-content: space-between;
   gap: 0.8rem;
   width: 50%;
-  margin: 0 auto;
 }
 
 .contactLinks i {
@@ -410,24 +402,11 @@ CONTACT
   color: $primaryWhite;
 }
 
-.iconDetails {
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.contactLinksFadeIn {
-  opacity: 100%;
-}
-
-.contactLinksFadeOut {
-  opacity: 0%;
-}
-
 .contactLinks {
   position: relative;
 }
 
-.contactLinks p {
+.iconDetails {
   position: absolute;
   bottom: -2rem;
   left: -10rem;
@@ -435,6 +414,12 @@ CONTACT
   text-align: center;
   color: $primaryWhite;
   font-weight: 500;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.contactLinksFadeIn {
+  opacity: 100%;
 }
 
 .contactForm {
@@ -550,6 +535,7 @@ MEDIA QUERIES
   // === CONTACT ===
 
   .contact .wrapper {
+    flex-direction: column;
     width: 80%;
   }
 
