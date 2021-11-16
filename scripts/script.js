@@ -1,4 +1,4 @@
-// Create namespace object
+// Creating namespace object
 const app = {};
 
 // Storing elements in namespace elements
@@ -12,6 +12,7 @@ app.skills = document.querySelector('#skills');
 app.projects = document.querySelector('#projects');
 app.contact = document.querySelector('#contact');
 app.titleWebDev = document.querySelector('#titleWebDev');
+app.skillsIcons = document.querySelectorAll('.skillsIcons');
 app.iconCalendly = document.querySelector('#iconCalendly');
 app.iconGithub = document.querySelector('#iconGithub');
 app.iconLinkedin = document.querySelector('#iconLinkedin');
@@ -19,14 +20,14 @@ app.iconDetailsCalendly = document.querySelector('#iconDetailsCalendly');
 app.iconDetailsGithub = document.querySelector('#iconDetailsGithub');
 app.iconDetailsLinkedin = document.querySelector('#iconDetailsLinkedin');
 
-app.navBarToggle = () => {
-  app.topBar.classList.toggle('bar1Transform');
-  app.middleBar.classList.toggle('bar2Transform');
-  app.bottomBar.classList.toggle('bar3Transform');
-  app.topNav.classList.toggle('navBarExpanded');
+app.navBarRevert = () => {
+  app.topBar.classList.remove('bar1Transform');
+  app.middleBar.classList.remove('bar2Transform');
+  app.bottomBar.classList.remove('bar3Transform');
+  app.topNav.classList.remove('navBarExpanded');
 }
 
-// Declare init method
+// Declaring init method
 app.init = () => {
   app.hamburgerMenu();
   app.navScroll();
@@ -34,39 +35,40 @@ app.init = () => {
   app.contactDesc();
 };
 
+// Open and close hamburger menu
 app.hamburgerMenu = () => {
   app.threeBars.addEventListener('click', () => {
-    app.navBarToggle();
+    app.topBar.classList.toggle('bar1Transform');
+    app.middleBar.classList.toggle('bar2Transform');
+    app.bottomBar.classList.toggle('bar3Transform');
+    app.topNav.classList.toggle('navBarExpanded');
   })
 }
 
+// Page scroll from top nav bar
 app.navScroll = function() {
   document.querySelector(`#arrow`).addEventListener('click', () => {
     app.aboutMe.scrollIntoView({behavior: "smooth"});
   })
   document.querySelector(`#navAboutMe`).addEventListener('click', () => {
     app.aboutMe.scrollIntoView({behavior: "smooth"});
-    app.navBarToggle();
+    app.navBarRevert();
   })
   document.querySelector(`#navSkills`).addEventListener('click', () => {
     app.skills.scrollIntoView({behavior: "smooth"});
-    app.navBarToggle();
+    app.navBarRevert();
   })
   document.querySelector(`#navProjects`).addEventListener('click', () => {
     app.projects.scrollIntoView({behavior: "smooth"});
-    app.navBarToggle();
+    app.navBarRevert();
   })
   document.querySelector(`#navContact`).addEventListener('click', () => {
     app.contact.scrollIntoView({behavior: "smooth"});
-    app.navBarToggle();
-  })
-  document.querySelector(`#hireContact`).addEventListener('click', () => {
-    app.contact.scrollIntoView({behavior: "smooth"});
-    app.navBarToggle();
+    app.navBarRevert();
   })
 }
 
-
+// Title animation
 app.titleColor = () => {
   // Declare and initialize countdown for white bar rendering
   let countdownForBar = 4;
@@ -100,31 +102,25 @@ app.titleColor = () => {
   }, 1000);
 }
 
+// Rendering icon nave upon hover
 app.contactDesc = () => {
   app.iconCalendly.addEventListener("mouseenter", () => {
-      app.iconDetailsCalendly.classList.add('contactLinksFadeIn');
-      app.iconDetailsCalendly.classList.remove('contactLinksFadeOut');
+      app.iconDetailsCalendly.classList.toggle('contactLinksFadeIn');
   })
   app.iconGithub.addEventListener("mouseenter", () => {
-    app.iconDetailsGithub.classList.add('contactLinksFadeIn');
-    app.iconDetailsGithub.classList.remove('contactLinksFadeOut');
+    app.iconDetailsGithub.classList.toggle('contactLinksFadeIn');
   })
   app.iconLinkedin.addEventListener("mouseenter", () => {
-    app.iconDetailsLinkedin.classList.add('contactLinksFadeIn');
-    app.iconDetailsLinkedin.classList.remove('contactLinksFadeOut');
+    app.iconDetailsLinkedin.classList.toggle('contactLinksFadeIn');
   })
-
   app.iconCalendly.addEventListener("mouseout", () => {
-    app.iconDetailsCalendly.classList.add('contactLinksFadeOut');
-    app.iconDetailsCalendly.classList.remove('contactLinksFadeIn');
+    app.iconDetailsCalendly.classList.toggle('contactLinksFadeIn');
   })
   app.iconGithub.addEventListener("mouseout", () => {
-    app.iconDetailsGithub.classList.add('contactLinksFadeOut');
-    app.iconDetailsGithub.classList.remove('contactLinksFadeIn');
+    app.iconDetailsGithub.classList.toggle('contactLinksFadeIn');
   })
   app.iconLinkedin.addEventListener("mouseout", () => {
-    app.iconDetailsLinkedin.classList.add('contactLinksFadeOut');
-    app.iconDetailsLinkedin.classList.remove('contactLinksFadeIn');
+    app.iconDetailsLinkedin.classList.toggle('contactLinksFadeIn');
   })
 }
 

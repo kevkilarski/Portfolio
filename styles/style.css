@@ -632,6 +632,8 @@ SKILLS
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(100% / 6 - 1.5rem);
           flex: 1 1 calc(100% / 6 - 1.5rem);
+  -webkit-transition: 1s;
+  transition: 1s;
   color: #f3f7fa;
 }
 
@@ -645,6 +647,10 @@ SKILLS
 .skillsIcons i {
   font-size: 55px;
   font-size: 2.75rem;
+}
+
+.skillsIcons:hover {
+  color: #274169;
 }
 
 /* ======================
@@ -814,52 +820,18 @@ CONTACT
 
 .iconDetails {
   opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .contactLinksFadeIn {
-  -webkit-animation: fadeIn 0.5s forwards;
-          animation: fadeIn 0.5s forwards;
+  opacity: 100%;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 .contactLinksFadeOut {
-  -webkit-animation: fadeOut 0.5s forwards;
-          animation: fadeOut 0.5s forwards;
+  opacity: 0%;
 }
 
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: inherit;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: inherit;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .contactLinks {
   position: relative;
 }

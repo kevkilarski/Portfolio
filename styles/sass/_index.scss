@@ -392,6 +392,7 @@ SKILLS
   align-items: center;
   flex-direction: column;
   flex: 1 1 calc(100% / 6 - 1.5rem);
+  transition: 1s;
   color: $primaryWhite;
 }
 
@@ -410,6 +411,23 @@ SKILLS
 .skillsIcons i {
   @include fontSize(55);
 }
+
+// .skillsIconsGlow {
+//   transition: 0.5s;
+//   background-color: red;
+// }
+
+.skillsIcons:hover {
+
+  color: $primaryBlue;
+  // animation: grow 2s forwards;
+}
+
+// @keyframes grow {
+//   100% {
+//     border-bottom: 5px solid $primaryBlue;
+//   }
+// }
 
 /* ======================
 PROJECTS
@@ -540,32 +558,15 @@ CONTACT
 
 .iconDetails {
   opacity: 0;
+  transition: 0.4s;
 }
 
 .contactLinksFadeIn {
-  animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
+  opacity: 100%;
 }
 
 .contactLinksFadeOut {
-  animation: fadeOut 0.5s forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: inherit;
-  }
-  100% {
-    opacity: 0;
-  }
+  opacity: 0%;
 }
 
 // 
