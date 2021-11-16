@@ -102,23 +102,29 @@ app.titleColor = () => {
 
 app.contactDesc = () => {
   app.iconCalendly.addEventListener("mouseenter", () => {
-    app.iconDetailsCalendly.style.display = "inline";
+      app.iconDetailsCalendly.classList.add('contactLinksFadeIn');
+      app.iconDetailsCalendly.classList.remove('contactLinksFadeOut');
   })
   app.iconGithub.addEventListener("mouseenter", () => {
-    app.iconDetailsGithub.style.display = "inline";
+    app.iconDetailsGithub.classList.add('contactLinksFadeIn');
+    app.iconDetailsGithub.classList.remove('contactLinksFadeOut');
   })
   app.iconLinkedin.addEventListener("mouseenter", () => {
-    app.iconDetailsLinkedin.style.display = "inline";
+    app.iconDetailsLinkedin.classList.add('contactLinksFadeIn');
+    app.iconDetailsLinkedin.classList.remove('contactLinksFadeOut');
   })
 
   app.iconCalendly.addEventListener("mouseout", () => {
-    app.iconDetailsCalendly.style.display = "none";
+    app.iconDetailsCalendly.classList.add('contactLinksFadeOut');
+    app.iconDetailsCalendly.classList.remove('contactLinksFadeIn');
   })
   app.iconGithub.addEventListener("mouseout", () => {
-    app.iconDetailsGithub.style.display = "none";
+    app.iconDetailsGithub.classList.add('contactLinksFadeOut');
+    app.iconDetailsGithub.classList.remove('contactLinksFadeIn');
   })
   app.iconLinkedin.addEventListener("mouseout", () => {
-    app.iconDetailsLinkedin.style.display = "none";
+    app.iconDetailsLinkedin.classList.add('contactLinksFadeOut');
+    app.iconDetailsLinkedin.classList.remove('contactLinksFadeIn');
   })
 }
 

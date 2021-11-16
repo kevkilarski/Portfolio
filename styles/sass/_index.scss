@@ -479,6 +479,7 @@ PROJECTS
   background: $primaryBlue;
   color: $primaryWhite;
   font-weight: 400;
+  transition: 0.2s;
 }
 
 .projectsLinks a:hover,
@@ -502,7 +503,7 @@ CONTACT
   justify-content: space-between;
   flex-direction: column;
   gap: 3.5rem;
-  width: 65%;
+  max-width: 50rem;
 }
 
 .contactText {
@@ -529,12 +530,44 @@ CONTACT
 .contactLinks i {
   @include fontSize(43);
   color: $primaryWhite;
+  // transition: 0.2s;
 }
 
-.contactLinks i:hover,
-.contactLinks i:focus {
-  color: $primaryBlue;
+// .contactLinks i:hover,
+// .contactLinks i:focus {
+//   color: $primaryBlue;
+// }
+
+.iconDetails {
+  opacity: 0;
 }
+
+.contactLinksFadeIn {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.contactLinksFadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: inherit;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 // 
 
 // .iconDetails {
@@ -572,10 +605,6 @@ CONTACT
 //   right: 0;
 // }
 
-.iconDetails {
-  display: none;
-}
-
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -584,6 +613,8 @@ CONTACT
   border: 3px solid $primaryWhite;
   border-radius: 0.4rem;
   padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .contactFormInputs {
@@ -594,7 +625,7 @@ CONTACT
 }
 
 .contactMessage {
-  height: 6rem;
+  height: 8rem;
 }
 
 .contactButton {
@@ -821,6 +852,10 @@ MEDIA QUERIES
 
   .contactGroup {
     width: 80%;
+  }
+
+  .contactForm {
+    width: 100%;
   }
 
   .contactMessage {

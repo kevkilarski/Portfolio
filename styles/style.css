@@ -740,6 +740,8 @@ PROJECTS
   background: #274169;
   color: #f3f7fa;
   font-weight: 400;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .projectsLinks a:hover,
@@ -769,7 +771,7 @@ CONTACT
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3.5rem;
-  width: 65%;
+  max-width: 50rem;
 }
 
 .contactText {
@@ -810,11 +812,54 @@ CONTACT
   color: #f3f7fa;
 }
 
-.contactLinks i:hover,
-.contactLinks i:focus {
-  color: #274169;
+.iconDetails {
+  opacity: 0;
 }
 
+.contactLinksFadeIn {
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.contactLinksFadeOut {
+  -webkit-animation: fadeOut 0.5s forwards;
+          animation: fadeOut 0.5s forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: inherit;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: inherit;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .contactLinks {
   position: relative;
 }
@@ -827,10 +872,6 @@ CONTACT
   text-align: center;
   color: #f3f7fa;
   font-weight: 500;
-}
-
-.iconDetails {
-  display: none;
 }
 
 .contactForm {
@@ -847,6 +888,8 @@ CONTACT
   border: 3px solid #f3f7fa;
   border-radius: 0.4rem;
   padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .contactFormInputs {
@@ -857,7 +900,7 @@ CONTACT
 }
 
 .contactMessage {
-  height: 6rem;
+  height: 8rem;
 }
 
 .contactButton {
@@ -1087,6 +1130,10 @@ MEDIA QUERIES
 
   .contactGroup {
     width: 80%;
+  }
+
+  .contactForm {
+    width: 100%;
   }
 
   .contactMessage {
