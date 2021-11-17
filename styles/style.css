@@ -780,6 +780,8 @@ CONTACT
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   gap: 2.7rem;
 }
 
@@ -838,14 +840,13 @@ CONTACT
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   gap: 1rem;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
   border: 3px solid #f3f7fa;
   border-radius: 0.4rem;
   padding: 2rem;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .contactFormInputs {
@@ -953,6 +954,7 @@ MEDIA QUERIES
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 1.4rem;
     width: 80%;
   }
 

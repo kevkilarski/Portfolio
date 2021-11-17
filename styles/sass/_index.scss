@@ -383,6 +383,7 @@ CONTACT
 .contactText {
   display: flex;
   flex-direction: column;
+  flex-basis: 45%;
   gap: 2.7rem;
 }
 
@@ -406,7 +407,6 @@ CONTACT
 }
 
 .iconDetails {
-
   bottom: -2rem;
   left: 0;
   right: 0;
@@ -424,13 +424,11 @@ CONTACT
 .contactForm {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 1rem;
-  flex-basis: 45%;
   border: 3px solid $primaryWhite;
   border-radius: 0.4rem;
   padding: 2rem;
-  width: 80%;
-  margin: 0 auto;
 }
 
 .contactFormInputs {
@@ -534,6 +532,7 @@ MEDIA QUERIES
 
   .contact .wrapper {
     flex-direction: column;
+    gap: 1.4rem;
     width: 80%;
   }
 
