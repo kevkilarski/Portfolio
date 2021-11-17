@@ -1186,12 +1186,22 @@ MEDIA QUERIES
     font-size: 1.1rem;
   }
 
-  .contactGroup {
-    width: 100%;
+  .contact .wrapper {
+    gap: 2rem;
   }
 
   .contactGroup {
-    gap: 1rem;
+    width: 100%;
+    gap: 2.8rem;
+  }
+
+  .contactLinks i {
+    font-size: 38px;
+    font-size: 1.9rem;
+  }
+
+  .contactLinksDesc {
+    display: none;
   }
 }
 @media (max-width: 375px) {
@@ -1200,9 +1210,5 @@ MEDIA QUERIES
     font-size: 1.7rem;
     line-height: 55px;
     line-height: 2.75rem;
-  }
-
-  .contactGroup {
-    gap: 0.6rem;
   }
 }

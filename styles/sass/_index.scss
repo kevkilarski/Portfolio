@@ -748,13 +748,23 @@ MEDIA QUERIES
   
   // === CONTACT ===
 
-  .contactGroup {
-    width: 100%;
+  .contact .wrapper {
+    gap: 2rem;
   }
 
   .contactGroup {
-    gap: 1rem;
+    width: 100%;
+    gap: 2.8rem;
   }
+
+  .contactLinks i {
+    @include fontSize(38);
+  }
+
+  .contactLinksDesc {
+    display: none;
+  }
+  
 }
 
 @media (max-width: 375px) {
@@ -768,7 +778,7 @@ MEDIA QUERIES
 
   // === CONTACT ===
 
-  .contactGroup {
-    gap: 0.6rem;
-  }
+  // .contactGroup {
+  //   gap: 0.6rem;
+  // }
 }
