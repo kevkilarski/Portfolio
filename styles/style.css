@@ -407,10 +407,11 @@ header .wrapper {
 .headerTitle button {
   margin-top: 1.5rem;
   padding: 0.5rem 1.5rem;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
   font-size: 25px;
   font-size: 1.25rem;
+  background-color: #f3f7fa;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .headerTitle button:hover {
@@ -808,8 +809,8 @@ CONTACT
 .iconDetails {
   position: absolute;
   bottom: -2rem;
-  left: -10rem;
-  right: -10rem;
+  left: 0;
+  right: 0;
   text-align: center;
   color: #f3f7fa;
   font-weight: 500;
@@ -1049,10 +1050,6 @@ MEDIA QUERIES
   .bar3Transform {
     -webkit-transform: translateY(-0.5rem) rotate(45deg);
             transform: translateY(-0.5rem) rotate(45deg);
-  }
-
-  header {
-    height: calc(80vh - 3rem);
   }
 
   h1 {

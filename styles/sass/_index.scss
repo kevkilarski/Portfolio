@@ -109,8 +109,9 @@ header .wrapper {
 .headerTitle button {
   margin-top: 1.5rem;
   padding: 0.5rem 1.5rem;
-  transition: 0.2s;
   @include fontSize(25);
+  background-color: $primaryWhite;
+  transition: 0.2s;
 }
 
 .headerTitle button:hover {
@@ -405,8 +406,8 @@ CONTACT
 .iconDetails {
   position: absolute;
   bottom: -2rem;
-  left: -10rem;
-  right: -10rem;
+  left: 0;
+  right: 0;
   text-align: center;
   color: $primaryWhite;
   font-weight: 500;
@@ -619,10 +620,6 @@ MEDIA QUERIES
   }
 
   // === HEADER ===
-
-  header {
-    height: calc(80vh - 3rem);
-  }
 
   h1 {
     @include fontSize(58);
