@@ -584,7 +584,7 @@ MEDIA QUERIES
   }
 
   .navBarExpanded {
-    height: 32%;
+    height: 15rem;
     opacity: 95%;
     background: $primaryBlue;
   }
@@ -664,6 +664,10 @@ MEDIA QUERIES
 @media (max-width: 534px) {
 
   // === HEADER ===
+  
+  header {
+    height: calc(90vh - 3rem);
+  }
 
   h1 {
     @include fontSize(47);
