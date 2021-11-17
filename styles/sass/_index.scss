@@ -50,21 +50,21 @@ NAVIGATION BAR
   gap: 2.5rem;
 }
 
-.contactLinks {
+.topLinks {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   font-weight: 400;
 }
 
-.contactLinks button {
+.topLinks button {
   transition: 0.2s;
   color: $primaryWhite;
   background-color: transparent;
   cursor: pointer;
 }
 
-.contactLinks button:hover {
+.topLinks button:hover {
   color: $secondaryBlue;
 }
 
@@ -384,14 +384,20 @@ CONTACT
   display: flex;
   flex-direction: column;
   gap: 2.7rem;
-  flex-basis: 50%;
 }
 
 .contactGroup {
   display: flex;
   justify-content: space-between;
-  gap: 0.8rem;
-  width: 50%;
+  width: 60%;
+  margin-left: -1.4rem;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .contactLinks i {
@@ -399,12 +405,8 @@ CONTACT
   color: $primaryWhite;
 }
 
-.contactLinks {
-  position: relative;
-}
-
 .iconDetails {
-  position: absolute;
+
   bottom: -2rem;
   left: 0;
   right: 0;
@@ -574,12 +576,7 @@ MEDIA QUERIES
     transition: 0.5s;
   }
 
-  .contactLinks {
-    width: 100%;
-    text-align: center;
-  }
-
-  .contactLinks button {
+  .topLinks button {
     padding: 1rem 4.5rem;
   }
 
@@ -650,6 +647,11 @@ MEDIA QUERIES
 
   .contactGroup {
     width: 80%;
+  }
+
+  .contactLinks {
+    width: 100%;
+    text-align: center;
   }
 
   .contactForm {

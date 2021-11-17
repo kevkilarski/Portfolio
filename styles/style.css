@@ -325,7 +325,7 @@ NAVIGATION BAR
   gap: 2.5rem;
 }
 
-.contactLinks {
+.topLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +337,7 @@ NAVIGATION BAR
   font-weight: 400;
 }
 
-.contactLinks button {
+.topLinks button {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #f3f7fa;
@@ -345,7 +345,7 @@ NAVIGATION BAR
   cursor: pointer;
 }
 
-.contactLinks button:hover {
+.topLinks button:hover {
   color: #3288c6;
 }
 
@@ -781,8 +781,6 @@ CONTACT
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.7rem;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
 }
 
 .contactGroup {
@@ -792,8 +790,22 @@ CONTACT
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 0.8rem;
-  width: 50%;
+  width: 60%;
+  margin-left: -1.4rem;
+}
+
+.contactLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4rem;
 }
 
 .contactLinks i {
@@ -802,12 +814,7 @@ CONTACT
   color: #f3f7fa;
 }
 
-.contactLinks {
-  position: relative;
-}
-
 .iconDetails {
-  position: absolute;
   bottom: -2rem;
   left: 0;
   right: 0;
@@ -996,12 +1003,7 @@ MEDIA QUERIES
     transition: 0.5s;
   }
 
-  .contactLinks {
-    width: 100%;
-    text-align: center;
-  }
-
-  .contactLinks button {
+  .topLinks button {
     padding: 1rem 4.5rem;
   }
 
@@ -1078,6 +1080,11 @@ MEDIA QUERIES
 
   .contactGroup {
     width: 80%;
+  }
+
+  .contactLinks {
+    width: 100%;
+    text-align: center;
   }
 
   .contactForm {
